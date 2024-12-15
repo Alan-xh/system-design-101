@@ -5,108 +5,111 @@
 <p align="center">
   【
   <a href="https://www.youtube.com/channel/UCZgt6AzoyjslHTC9dz0UoTw">
-    👨🏻‍💻 YouTube
+    👨None🏻‍None💻 YouTube
   </a> | 
   <a href="https://blog.bytebytego.com/?utm_source=site">
-    📮 Newsletter
+    📮 通讯
   </a> 】
 </p>
 
 <a href="https://trendshift.io/repositories/3709" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3709" alt="ByteByteGoHq%2Fsystem-design-101 | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-# System Design 101
+# 系统设计101
 
-Explain complex systems using visuals and simple terms. 
+使用可视化和简单术语来解释复杂系统。
 
-Whether you're preparing for a System Design Interview or you simply want to understand how systems work beneath the surface, we hope this repository will help you achieve that.
+无论您是在准备系统设计面试还是只是想了解系统在表面下的工作原理，我们希望这个仓库能帮助您实现这一目标。
 
-# Table of Contents
+# 目录
 
 <!-- TOC toc.levels=2 -->
 
-- [Communication protocols](#communication-protocols)
-  - [REST API vs. GraphQL](#rest-api-vs-graphql)
-  - [How does gRPC work?](#how-does-grpc-work)
-  - [What is a webhook?](#what-is-a-webhook)
-  - [How to improve API performance?](#how-to-improve-api-performance)
-  - [HTTP 1.0 -\> HTTP 1.1 -\> HTTP 2.0 -\> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
+- [通信协议](#通信协议)
+  - [REST API 与 GraphQL](#rest-api-与-graphql)
+  - [gRPC 如何工作？](#grpc-如何工作)
+  - [什么是 webhook？](#什么是-webhook)
+  - [如何提升API性能？](#如何提升api性能)
+  - [HTTP 1.0 -> HTTP 1.1 -> HTTP 2.0 -> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
   - [SOAP vs REST vs GraphQL vs RPC](#soap-vs-rest-vs-graphql-vs-rpc)
-  - [Code First vs. API First](#code-first-vs-api-first)
-  - [HTTP status codes](#http-status-codes)
-  - [What does API gateway do?](#what-does-api-gateway-do)
-  - [How do we design effective and safe APIs?](#how-do-we-design-effective-and-safe-apis)
-  - [TCP/IP encapsulation](#tcpip-encapsulation)
-  - [Why is Nginx called a “reverse” proxy?](#why-is-nginx-called-a-reverse-proxy)
-  - [What are the common load-balancing algorithms?](#what-are-the-common-load-balancing-algorithms)
-  - [URL, URI, URN - Do you know the differences?](#url-uri-urn---do-you-know-the-differences)
+  - [代码优先与API优先](#代码优先与api优先)
+  - [HTTP状态码](#http状态码)
+  - [API网关的功能是什么？](#api网关的功能是什么)
+  - [如何设计有效且安全的API？](#如何设计有效且安全的api)
+  - [TCP/IP封装](#tcpip封装)
+  - [为什么Nginx被称为“反向”代理？](#为什么nginx被称为反向代理)
+  - [常见的负载均衡算法有哪些？](#常见的负载均衡算法有哪些)
+  - [URL, URI, URN - 你知道它们的区别吗？](#url-uri-urn---你知道它们的区别吗)
 - [CI/CD](#cicd)
-  - [CI/CD Pipeline Explained in Simple Terms](#cicd-pipeline-explained-in-simple-terms)
-  - [Netflix Tech Stack (CI/CD Pipeline)](#netflix-tech-stack-cicd-pipeline)
-- [Architecture patterns](#architecture-patterns)
-  - [MVC, MVP, MVVM, MVVM-C, and VIPER](#mvc-mvp-mvvm-mvvm-c-and-viper)
-  - [18 Key Design Patterns Every Developer Should Know](#18-key-design-patterns-every-developer-should-know)
-- [Database](#database)
-  - [A nice cheat sheet of different databases in cloud services](#a-nice-cheat-sheet-of-different-databases-in-cloud-services)
-  - [8 Data Structures That Power Your Databases](#8-data-structures-that-power-your-databases)
-  - [How is an SQL statement executed in the database?](#how-is-an-sql-statement-executed-in-the-database)
-  - [CAP theorem](#cap-theorem)
-  - [Types of Memory and Storage](#types-of-memory-and-storage)
-  - [Visualizing a SQL query](#visualizing-a-sql-query)
-  - [SQL language](#sql-language)
-- [Cache](#cache)
-  - [Data is cached everywhere](#data-is-cached-everywhere)
-  - [Why is Redis so fast?](#why-is-redis-so-fast)
-  - [How can Redis be used?](#how-can-redis-be-used)
-  - [Top caching strategies](#top-caching-strategies)
-- [Microservice architecture](#microservice-architecture)
-  - [What does a typical microservice architecture look like?](#what-does-a-typical-microservice-architecture-look-like)
-  - [Microservice Best Practices](#microservice-best-practices)
-  - [What tech stack is commonly used for microservices?](#what-tech-stack-is-commonly-used-for-microservices)
-  - [Why is Kafka fast](#why-is-kafka-fast)
-- [Payment systems](#payment-systems)
-  - [How to learn payment systems?](#how-to-learn-payment-systems)
-  - [Why is the credit card called “the most profitable product in banks”? How does VISA/Mastercard make money?](#why-is-the-credit-card-called-the-most-profitable-product-in-banks-how-does-visamastercard-make-money)
-  - [How does VISA work when we swipe a credit card at a merchant’s shop?](#how-does-visa-work-when-we-swipe-a-credit-card-at-a-merchants-shop)
-  - [Payment Systems Around The World Series (Part 1): Unified Payments Interface (UPI) in India](#payment-systems-around-the-world-series-part-1-unified-payments-interface-upi-in-india)
+  - [用简单术语解释CI/CD管道](#用简单术语解释cicd管道)
+  - [Netflix技术堆栈（CI/CD管道）](#netflix技术堆栈cicd管道)
+- [架构模式](#架构模式)
+  - [MVC, MVP, MVVM, MVVM-C和VIPER](#mvc-mvp-mvvm-mvvm-c和viper)
+  - [每个开发者都应该知道的18个关键设计模式](#每个开发者都应该知道的18个关键设计模式)
+- [数据库](#数据库)
+  - [云服务中不同数据库的简要概述](#云服务中不同数据库的简要概述)
+  - [8种支持数据库的数据结构](#8种支持数据库的数据结构)
+  - [SQL语句如何在数据库中执行？](#sql语句如何在数据库中执行)
+  - [CAP定理](#cap定理)
+  - [内存和存储的类型](#内存和存储的类型)
+  - [可视化SQL查询](#可视化sql查询)
+  - [SQL语言](#sql语言)
+- [缓存](#缓存)
+  - [数据无处不在](#数据无处不在)
+  - [为什么Redis这么快？](#为什么redis这么快)
+  - [Redis有哪些用途？](#redis有哪些用途)
+  - [顶级缓存策略](#顶级缓存策略)
+- [微服务架构](#微服务架构)
+  - [典型的微服务架构是什么样的？](#典型的微服务架构是什么样的)
+  - [微服务最佳实践](#微服务最佳实践)
+  - [微服务常用的技术堆栈是什么？](#微服务常用的技术堆栈是什么)
+  - [为什么Kafka这么快](#为什么kafka这么快)
+- [支付系统](#支付系统)
+  - [如何学习支付系统？](#如何学习支付系统)
+  - [为什么信用卡被称为“银行最赚钱的产品”？Visa/Mastercard是如何盈利的？](#为什么信用卡被称为银行最赚钱的产品-visamastercard是如何盈利的)
+  - [当我们在商店刷信用卡时，Visa是如何工作的？](#当我们在商店刷信用卡时-visa是如何工作的)
+  - [全球支付系统系列（第一部分）：印度的统一支付接口（UPI）](#全球支付系统系列第一部分印度的统一支付接口upi)
 - [DevOps](#devops)
-  - [DevOps vs. SRE vs. Platform Engineering. What is the difference?](#devops-vs-sre-vs-platform-engineering-what-is-the-difference)
-  - [What is k8s (Kubernetes)?](#what-is-k8s-kubernetes)
-  - [Docker vs. Kubernetes. Which one should we use?](#docker-vs-kubernetes-which-one-should-we-use)
-  - [How does Docker work?](#how-does-docker-work)
+  - [DevOps vs. SRE vs. 平台工程。有什么区别？](#devops-vs-sre-vs-平台工程有什么区别)
+  - [什么是k8s（Kubernetes）？](#什么是k8s-kubernetes)
+  - [Docker vs. Kubernetes。应该使用哪个？](#docker-vs-kubernetes-应该使用哪个)
+  - [Docker是如何工作的？](#docker是如何工作的)
 - [GIT](#git)
-  - [How Git Commands work](#how-git-commands-work)
-  - [How does Git Work?](#how-does-git-work)
-  - [Git merge vs. Git rebase](#git-merge-vs-git-rebase)
-- [Cloud Services](#cloud-services)
-  - [A nice cheat sheet of different cloud services (2023 edition)](#a-nice-cheat-sheet-of-different-cloud-services-2023-edition)
-  - [What is cloud native?](#what-is-cloud-native)
-- [Developer productivity tools](#developer-productivity-tools)
-  - [Visualize JSON files](#visualize-json-files)
-  - [Automatically turn code into architecture diagrams](#automatically-turn-code-into-architecture-diagrams)
+  - [Git命令如何工作](#git命令如何工作)
+  - [Git如何工作？](#git如何工作)
+  - [Git合并与Git变基](#git合并与git变基)
+- [云服务](#云服务)
+  - [不同云服务的简要概述（2023版）](#不同云服务的简要概述2023版)
+  - [什么是云原生？](#什么是云原生)
+- [开发者生产力工具](#开发者生产力工具)
+  - [可视化JSON文件](#可视化json文件)
+  - [自动将代码转换为架构图](#自动将代码转换为架构图)
 - [Linux](#linux)
-  - [Linux file system explained](#linux-file-system-explained)
-  - [18 Most-used Linux Commands You Should Know](#18-most-used-linux-commands-you-should-know)
-- [Security](#security)
-  - [How does HTTPS work?](#how-does-https-work)
-  - [Oauth 2.0 Explained With Simple Terms.](#oauth-20-explained-with-simple-terms)
-  - [Top 4 Forms of Authentication Mechanisms](#top-4-forms-of-authentication-mechanisms)
-  - [Session, cookie, JWT, token, SSO, and OAuth 2.0 - what are they?](#session-cookie-jwt-token-sso-and-oauth-20---what-are-they)
-  - [How to store passwords safely in the database and how to validate a password?](#how-to-store-passwords-safely-in-the-database-and-how-to-validate-a-password)
-  - [Explaining JSON Web Token (JWT) to a 10 year old Kid](#explaining-json-web-token-jwt-to-a-10-year-old-kid)
-  - [How does Google Authenticator (or other types of 2-factor authenticators) work?](#how-does-google-authenticator-or-other-types-of-2-factor-authenticators-work)
-- [Real World Case Studies](#real-world-case-studies)
-  - [Netflix's Tech Stack](#netflixs-tech-stack)
-  - [Twitter Architecture 2022](#twitter-architecture-2022)
-  - [Evolution of Airbnb’s microservice architecture over the past 15 years](#evolution-of-airbnbs-microservice-architecture-over-the-past-15-years)
-  - [Monorepo vs. Microrepo.](#monorepo-vs-microrepo)
-  - [How will you design the Stack Overflow website?](#how-will-you-design-the-stack-overflow-website)
-  - [Why did Amazon Prime Video monitoring move from serverless to monolithic? How can it save 90% cost?](#why-did-amazon-prime-video-monitoring-move-from-serverless-to-monolithic-how-can-it-save-90-cost)
-  - [How does Disney Hotstar capture 5 Billion Emojis during a tournament?](#how-does-disney-hotstar-capture-5-billion-emojis-during-a-tournament)
-  - [How Discord Stores Trillions Of Messages](#how-discord-stores-trillions-of-messages)
-  - [How do video live streamings work on YouTube, TikTok live, or Twitch?](#how-do-video-live-streamings-work-on-youtube-tiktok-live-or-twitch)
+  - [Linux文件系统解释](#linux文件系统解释)
+  - [你应该知道的18个最常用的Linux命令](#你应该知道的18个最常用的linux命令)
+- [安全](#安全)
+  - [HTTPS是如何工作的？](#https是如何工作的)
+  - [用简单术语解释OAuth 2.0](#用简单术语解释oauth-20)
+  - [四种主要的认证机制](#四种主要的认证机制)
+  - [会话、Cookie、JWT、令牌、SSO和OAuth 2.0 - 它们是什么？](#会话cookie-jwt-令牌sso和oauth-20---它们是什么)
+  - [如何在数据库中安全存储密码以及如何验证密码？](#如何在数据库中安全存储密码以及如何验证密码)
+  - [向10岁小孩解释JSON Web Token (JWT)](#向10岁小孩解释json-web-token-jwt)
+  - [Google Authenticator（或其他类型的双因素认证器）是如何工作的？](#google-authenticator或其他类型的双因素认证器是如何工作的)
+- [现实世界的案例研究](#现实世界的案例研究)
+  - [Netflix的技术堆栈](#netflix的技术堆栈)
+  - [Twitter架构2022](#twitter架构2022)
+  - [过去15年Airbnb微服务架构的演变](#过去15年airbnb微服务架构的演变)
+  - [单体仓库 vs. 微仓库](#单体仓库-vs-微仓库)
+  - [你将如何设计Stack Overflow网站？](#你将如何设计stack-overflow网站)
+  - [为什么Amazon Prime Video监控从无服务器转向单体架构？它如何节省90%的成本？](#为什么amazon-prime-video监控从无服务器转向单体架构它如何节省90的成本)
+  - [Disney Hotstar在比赛期间如何捕获50亿个表情符号？](#disney-hotstar在比赛期间如何捕获50亿个表情符号)
+  - [Discord如何存储万亿条消息](#discord如何存储万亿条消息)
+  - [YouTube、TikTok直播或Twitch上的视频直播是如何工作的？](#youtube-tiktok直播或twitch上的视频直播是如何工作的)
 
 <!-- /TOC -->
 
+
+question = r"""
+翻译以下文本,切记保持md格式
 ## Communication protocols
 
 Architecture styles define how different components of an application programming interface (API) interact with one another. As a result, they ensure efficiency, reliability, and ease of integration with other systems by providing a standard approach to designing and building APIs. Here are the most used styles:
@@ -115,964 +118,961 @@ Architecture styles define how different components of an application programmin
   <img src="images/api-architecture-styles.png" style="width: 640px">
 </p>
 
-- SOAP: 
+## 通信协议
 
-  Mature, comprehensive, XML-based
+架构风格定义了应用程序接口（API）不同组件之间的交互方式。因此，它们通过提供设计和构建API的标准方法，确保了效率、可靠性以及与其他系统的易集成。以下是最常用的风格：
+
+<p>
+  <img src="images/api-architecture-styles.png" style="width: 640px">
+</p>
+
+- **SOAP**：
+
+  成熟、全面、基于XML
   
-  Best for enterprise applications 
+  最适合企业应用
 
-- RESTful: 
+- **RESTful**：
 
-  Popular, easy-to-implement, HTTP methods 
+  流行、易于实现、使用HTTP方法
+  
+  非常适合Web服务
 
-  Ideal for web services 
+- **GraphQL**：
 
-- GraphQL: 
+  查询语言，请求特定数据
+  
+  减少网络开销，响应更快
 
-  Query language, request specific data 
+- **gRPC**：
 
-  Reduces network overhead, faster responses 
+  现代、高性能，使用Protocol Buffers
+  
+  适用于微服务架构
 
-- gRPC: 
+- **WebSocket**：
 
-  Modern, high-performance, Protocol Buffers 
+  实时、双向、持久连接
+  
+  非常适合低延迟数据交换
 
-  Suitable for microservices architectures 
+- **Webhook**：
 
-- WebSocket: 
-
-  Real-time, bidirectional, persistent connections 
-
-  Perfect for low-latency data exchange 
-
-- Webhook: 
-
-  Event-driven, HTTP callbacks, asynchronous 
-
-  Notifies systems when events occur
+  事件驱动、HTTP回调、异步
+  
+  在事件发生时通知系统
 
 
-### REST API vs. GraphQL
+### REST API与GraphQL对比
 
-When it comes to API design, REST and GraphQL each have their own strengths and weaknesses.
+在API设计中，REST和GraphQL各有其优势和劣势。
 
-The diagram below shows a quick comparison between REST and GraphQL.
+下图显示了REST和GraphQL之间的快速对比。
 
 <p>
   <img src="images/graphQL.jpg">
 </p>
 
-REST
+**REST**
 
-- Uses standard HTTP methods like GET, POST, PUT, DELETE for CRUD operations.
-- Works well when you need simple, uniform interfaces between separate services/applications.
-- Caching strategies are straightforward to implement.
-- The downside is it may require multiple roundtrips to assemble related data from separate endpoints.
+- 使用标准的HTTP方法如GET、POST、PUT、DELETE来进行CRUD操作。
+- 当需要在独立的服务/应用程序之间提供简单统一的接口时效果很好。
+- 缓存策略易于实现。
+- 缺点是可能需要多次往返来从不同的端点组装相关数据。
 
-GraphQL
+**GraphQL**
 
-- Provides a single endpoint for clients to query for precisely the data they need.
-- Clients specify the exact fields required in nested queries, and the server returns optimized payloads containing just those fields.
-- Supports Mutations for modifying data and Subscriptions for real-time notifications.
-- Great for aggregating data from multiple sources and works well with rapidly evolving frontend requirements.
-- However, it shifts complexity to the client side and can allow abusive queries if not properly safeguarded
-- Caching strategies can be more complicated than REST.
+- 提供一个单一端点让客户端可以查询他们需要的确切数据。
+- 客户端可以指定嵌套查询中需要的精确字段，服务器返回仅包含这些字段的优化负载。
+- 支持Mutation来修改数据和Subscription来进行实时通知。
+- 适用于从多个来源聚合数据，适用于前端需求快速变化的情况。
+- 然而，它将复杂性转移到了客户端，如果不加以保护，可能会允许None滥用查询。
+- 缓存策略可能比REST更复杂。
 
-The best choice between REST and GraphQL depends on the specific requirements of the application and development team. GraphQL is a good fit for complex or frequently changing frontend needs, while REST suits applications where simple and consistent contracts are preferred.
+REST和GraphQL之间的最佳选择取决于应用和开发团队的具体需求。GraphQL适合复杂或经常变化的前端需求，而REST则适用于偏好简单和一致性合同的应用。
 
-Neither API approach is a silver bullet. Carefully evaluating requirements and tradeoffs is important to pick the right style. Both REST and GraphQL are valid options for exposing data and powering modern applications.
+没有哪种API方法是万能的。仔细评估需求和权衡是选择正确风格的关键。REST和GraphQL都是有效的选择，用于公开数据和支持现代应用程序。
 
 
-### How does gRPC work?
+### gRPC如何工作？
 
-RPC (Remote Procedure Call) is called “**remote**” because it enables communications between remote services when services are deployed to different servers under microservice architecture. From the user’s point of view, it acts like a local function call.
+RPC（远程过程调用）被称为“**远程**”，因为它在微服务架构下允许不同服务器上的服务之间的通信。从用户的角度来看，它就像一个本地函数调用。
 
-The diagram below illustrates the overall data flow for **gRPC**.
+下图展示了**gRPC**的整体数据流。
 
 <p>
   <img src="images/grpc.jpg">
 </p>
 
-Step 1: A REST call is made from the client. The request body is usually in JSON format.
+步骤1：客户端发起一个REST调用。请求体通常为JSON格式。
 
-Steps 2 - 4: The order service (gRPC client) receives the REST call, transforms it, and makes an RPC call to the payment service. gRPC encodes the **client stub** into a binary format and sends it to the low-level transport layer.
+步骤2 - 4：订单服务（gRPC客户端）接收REST调用，进行转换，并向支付服务发起RPC调用。gRPC将**客户端存根**编码为二进制格式并发送到低层传输层。
 
-Step 5: gRPC sends the packets over the network via HTTP2. Because of binary encoding and network optimizations, gRPC is said to be 5X faster than JSON.
+步骤5：gRPC通过HTTP2在网络上传送数据包。由于二进制编码和网络优化，gRPC被认为比JSON快5倍。
 
-Steps 6 - 8: The payment service (gRPC server) receives the packets from the network, decodes them, and invokes the server application.
+步骤6 - 8：支付服务（gRPC服务器）从网络接收数据包，解码它们，并调用服务器应用程序。
 
-Steps 9 - 11: The result is returned from the server application, and gets encoded and sent to the transport layer.
+步骤9 - 11：结果从服务器应用程序返回，编码并发送到传输层。
 
-Steps 12 - 14: The order service receives the packets, decodes them, and sends the result to the client application.
+步骤12 - 14：订单服务接收数据包，解码它们，并将结果发送到客户端应用程序。
 
-### What is a webhook?
+### Webhook是什么？
 
-The diagram below shows a comparison between polling and Webhook. 
+下图展示了轮询和Webhook的比较。
 
 <p>
   <img src="images/webhook.jpeg" style="width: 680px" />
 </p>
 
-Assume we run an eCommerce website. The clients send orders to the order service via the API gateway, which goes to the payment service for payment transactions. The payment service then talks to an external payment service provider (PSP) to complete the transactions. 
+假设我们运营一个电子商务网站。客户通过API网关将订单发送到订单服务，订单服务再转到支付服务处理支付交易。支付服务然后与外部支付服务提供商（PSP）通信以完成交易。
 
-There are two ways to handle communications with the external PSP. 
+与外部PSP的通信有两种方式：
 
-**1. Short polling** 
+**1. 短轮询**
 
-After sending the payment request to the PSP, the payment service keeps asking the PSP about the payment status. After several rounds, the PSP finally returns with the status. 
+在向PSP发送支付请求后，支付服务不断询问PSP支付状态。在几轮询问后，PSP最终返回状态。
 
-Short polling has two drawbacks: 
-* Constant polling of the status requires resources from the payment service. 
-* The External service communicates directly with the payment service, creating security vulnerabilities. 
+短轮询有两个缺点：
+* 持续的轮询状态需要支付服务的资源。
+* 外部服务直接与支付服务通信，存在安全漏洞。
 
-**2. Webhook** 
+**2. Webhook**
 
-We can register a webhook with the external service. It means: call me back at a certain URL when you have updates on the request. When the PSP has completed the processing, it will invoke the HTTP request to update the payment status.
+我们可以向外部服务注册一个webhook。这意味着：当你有请求更新时，请回调到某个特定的URL。当PSP完成处理时，它将通过HTTP请求来更新支付状态。
 
-In this way, the programming paradigm is changed, and the payment service doesn’t need to waste resources to poll the payment status anymore.
+这样，编程范式发生了变化，支付服务不再需要浪费资源去轮询支付状态。
 
-What if the PSP never calls back? We can set up a housekeeping job to check payment status every hour.
+如果PSP从未回调呢？我们可以设置一个每小时检查一次支付状态的家务清理作业。
 
-Webhooks are often referred to as reverse APIs or push APIs because the server sends HTTP requests to the client. We need to pay attention to 3 things when using a webhook:
+Webhook通常被称为反向API或推送API，因为服务器会向客户端发送HTTP请求。在使用webhook时，我们需要注意3件事：
 
-1. We need to design a proper API for the external service to call.
-2. We need to set up proper rules in the API gateway for security reasons.
-3. We need to register the correct URL at the external service.
+1. 我们需要为外部服务设计一个合适的API。
+2. 为了安全原因，我们需要在API网关设置适当的规则。
+3. 我们需要在外部服务注册正确的URL。
 
-### How to improve API performance?
+### 如何提高API性能？
 
-The diagram below shows 5 common tricks to improve API performance.
+下图展示了5个常见的提高API性能的技巧。
 
 <p>
   <img src="images/api-performance.jpg">
 </p>
 
-Pagination
+分页
 
-This is a common optimization when the size of the result is large. The results are streaming back to the client to improve the service responsiveness.
+当结果集非常大时，这是常见的优化方法。结果会流式传输回客户端以提高服务的响应性。
 
-Asynchronous Logging
+异步日志
 
-Synchronous logging deals with the disk for every call and can slow down the system. Asynchronous logging sends logs to a lock-free buffer first and immediately returns. The logs will be flushed to the disk periodically. This significantly reduces the I/O overhead.
+同步日志每次调用都会与磁盘交互，可能减慢系统。异步日志首先将日志发送到无锁缓冲区并立即返回。日志将定期刷新到磁盘。这显著减少了I/O开销。
 
-Caching
+缓存
 
-We can store frequently accessed data into a cache. The client can query the cache first instead of visiting the database directly. If there is a cache miss, the client can query from the database. Caches like Redis store data in memory, so the data access is much faster than the database.
+我们可以将经常访问的数据存储到缓存中。客户端可以先查询缓存而不是直接访问数据库。如果缓存未命中，客户端可以从数据库查询。像Redis这样的缓存将数据存储在内存中，因此数据访问速度比数据库快得多。
 
-Payload Compression
+负载压缩
 
-The requests and responses can be compressed using gzip etc so that the transmitted data size is much smaller. This speeds up the upload and download.
+请求和响应可以使用gzip等压缩，这样传输的数据大小会小很多。这加速了上传和下载。
 
-Connection Pool
+连接池
 
-When accessing resources, we often need to load data from the database. Opening the closing db connections adds significant overhead. So we should connect to the db via a pool of open connections. The connection pool is responsible for managing the connection lifecycle.
+在访问资源时，我们经常需要从数据库加载数据。打开和关闭数据库连接会带来很大的开销。因此，我们应该通过一个开放连接池连接到数据库。连接池负责管理连接的生命周期。
 
 ### HTTP 1.0 -> HTTP 1.1 -> HTTP 2.0 -> HTTP 3.0 (QUIC)
 
-What problem does each generation of HTTP solve?
+每一代HTTP解决了什么问题？
 
-The diagram below illustrates the key features.
+下图说明了关键特性。
 
 <p>
   <img src="images/http3.jpg" />
 </p>
 
-- HTTP 1.0 was finalized and fully documented in 1996. Every request to the same server requires a separate TCP connection.
+- HTTP 1.0于1996年最终确定并完全文档化。对同一服务器的每次请求都需要一个单独的TCP连接。
 
-- HTTP 1.1 was published in 1997. A TCP connection can be left open for reuse (persistent connection), but it doesn’t solve the HOL (head-of-line) blocking issue. 
+- HTTP 1.1于1997年发布。TCP连接可以保持打开以供重用（持久连接），但它没有解决HOL（队首阻塞）问题。
 
-  HOL blocking - when the number of allowed parallel requests in the browser is used up, subsequent requests need to wait for the former ones to complete.
+  HOL阻塞 - 当浏览器中允许的并行请求数用尽时，后续请求需要等待前面的请求完成。
 
-- HTTP 2.0 was published in 2015. It addresses HOL issue through request multiplexing, which eliminates HOL blocking at the application layer, but HOL still exists at the transport (TCP) layer.
+- HTTP 2.0于2015年发布。它通过请求多路复用解决了HOL问题，这消除了应用层面的HOL阻塞，但传输层（TCP）层仍然存在HOL。
 
-  As you can see in the diagram, HTTP 2.0 introduced the concept of HTTP “streams”: an abstraction that allows multiplexing different HTTP exchanges onto the same TCP connection. Each stream doesn’t need to be sent in order.
+  如图所示，HTTP 2.0引入了HTTP“流”的概念：这是一个允许将不同的HTTP交换复用到同一TCP连接上的抽象。每个流不需要按顺序发送。
 
-- HTTP 3.0 first draft was published in 2020. It is the proposed successor to HTTP 2.0. It uses QUIC instead of TCP for the underlying transport protocol, thus removing HOL blocking in the transport layer. 
+- HTTP 3.0的初稿于2020年发布。它是HTTP 2.0的建议继任者。它使用QUIC而不是TCP作为底层传输协议，从而在传输层上消除了HOL阻塞。
 
-QUIC is based on UDP. It introduces streams as first-class citizens at the transport layer. QUIC streams share the same QUIC connection, so no additional handshakes and slow starts are required to create new ones, but QUIC streams are delivered independently such that in most cases packet loss affecting one stream doesn't affect others.
+QUIC基于UDP。它在传输层引入流作为一等公民。QUIC流共享同一个QUIC连接，因此不需要额外的手握和慢启动来创建新的流，但QUIC流独立传送，这样在大多数情况下，影响一个流的数据包丢失不会影响其他流。
 
 ### SOAP vs REST vs GraphQL vs RPC
 
-The diagram below illustrates the API timeline and API styles comparison.
+下图展示了API时间线和API风格比较。
 
-Over time, different API architectural styles are released. Each of them has its own patterns of standardizing data exchange. 
+随着时间的推移，发布了不同的API架构风格。它们每一种都有标准化数据交换的模式。
 
-You can check out the use cases of each style in the diagram.
+您可以在图表中查看每种风格的使用案例。
 
 <p>
   <img src="images/SOAP vs REST vs GraphQL vs RPC.jpeg" />
 </p>
 
+### 代码优先 vs. API优先
 
-### Code First vs. API First 
-
-The diagram below shows the differences between code-first development and API-first development. Why do we want to consider API first design?
+下图展示了代码优先开发和API优先开发之间的差异。为什么我们要考虑API优先设计？
 
 <p>
   <img src="images/api_first.jpg" style="width: 680px" />
 </p>
 
+- 微服务增加了系统的复杂性，我们有独立的服务来服务系统的不同功能。虽然这种架构便于解None耦和职责分离，但我们需要处理服务间的各种通信。
 
-- Microservices increase system complexity and we have separate services to serve different functions of the system. While this kind of architecture facilitates decoupling and segregation of duty, we need to handle the various communications among services. 
+在编写代码之前，最好先考虑系统的复杂性，并仔细定义服务的边界。
 
-It is better to think through the system's complexity before writing the code and carefully defining the boundaries of the services.
+- 独立的功能团队需要使用相同的语言，并且专职的功能团队只负责他们自己的组件和服务。建议通过API设计使组织内部使用相同的语言。
 
-- Separate functional teams need to speak the same language and the dedicated functional teams are only responsible for their own components and services. It is recommended that the organization speak the same language via API design. 
+我们可以在编写代码之前通过模拟请求和响应来验证API设计。
 
-We can mock requests and responses to validate the API design before writing code.
+- 提高软件质量和开发者生产力 由于在项目开始时我们已经解决了大部分不确定性，整个开发过程更加顺畅，软件质量也大大提高。
 
-- Improve software quality and developer productivity Since we have ironed out most of the uncertainties when the project starts, the overall development process is smoother, and the software quality is greatly improved. 
+开发者也对这一过程感到满意，因为他们可以专注于功能开发，而不是应对突然的变更。
 
-Developers are happy about the process as well because they can focus on functional development instead of negotiating sudden changes.
+在项目生命周期末期出现意外情况的可能性降低了。
 
-The possibility of having surprises toward the end of the project lifecycle is reduced.
+因为我们首先设计了API，所以可以在代码开发的同时设计测试。在某种程度上，使用API优先开发也是一种TDD（测试驱动设计）。
 
-Because we have designed the API first, the tests can be designed while the code is being developed. In a way, we also have TDD (Test Driven Design) when using API first development.
-
-### HTTP status codes
+### HTTP状态码
 
 <p>
   <img src="images/http-status-code.jpg" style="width: 540px" />
 </p>
 
+HTTP的响应代码分为五类：
 
-The response codes for HTTP are divided into five categories: 
+信息性（100-199）
+成功（200-299）
+重定向（300-399）
+客户端错误（400-499）
+服务器错误（500-599）
 
-Informational (100-199) 
-Success (200-299) 
-Redirection (300-399) 
-Client Error (400-499) 
-Server Error (500-599) 
+### API网关做什么？
 
-### What does API gateway do? 
-
-The diagram below shows the details. 
+下图显示了详细信息。
 
 <p>
   <img src="images/api_gateway.jpg" style="width: 520px" />
 </p>
 
-Step 1 - The client sends an HTTP request to the API gateway. 
+步骤1 - 客户端向API网关发送HTTP请求。
 
-Step 2 - The API gateway parses and validates the attributes in the HTTP request. 
+步骤2 - API网关解析并验证HTTP请求中的属性。
 
-Step 3 - The API gateway performs allow-list/deny-list checks. 
+步骤3 - API网关执行允许列表/拒绝列表检查。
 
-Step 4 - The API gateway talks to an identity provider for authentication and authorization. 
+步骤4 - API网关与身份提供者进行身份验证和授权。
 
-Step 5 - The rate limiting rules are applied to the request. If it is over the limit, the request is rejected. 
+步骤5 - 对请求应用速率限制规则。如果超出限制，请求将被拒绝。
 
-Steps 6 and 7 - Now that the request has passed basic checks, the API gateway finds the relevant service to route to by path matching. 
+步骤6和7 - 现在请求已经通过了基本检查，API网关通过路径匹配找到相关的服务进行路由。
 
-Step 8 - The API gateway transforms the request into the appropriate protocol and sends it to backend microservices. 
+步骤8 - API网关将请求转换为适当的协议并发送到后端微服务。
 
-Steps 9-12: The API gateway can handle errors properly, and deals with faults if the error takes a longer time to recover (circuit break). It can also leverage ELK (Elastic-Logstash-Kibana) stack for logging and monitoring. We sometimes cache data in the API gateway. 
+步骤9-12：API网关可以正确处理错误，并在错误恢复时间较长的情况下处理故障（断路）。它还可以利用ELK（Elastic-Logstash-Kibana）堆栈进行日志记录和监控。有时我们在API网关中缓存数据。
 
-### How do we design effective and safe APIs?
+### 如何设计有效且安全的API？
 
-The diagram below shows typical API designs with a shopping cart example. 
+下图展示了一个典型的API设计示例，以购物车为例。
 
 <p>
   <img src="images/safe-apis.jpg" />
 </p>
 
+注意，API设计不仅仅是URL路径设计。大多数时候，我们需要选择适当的资源名称、标识符和路径模式。设计适当的HTTP头字段或在API网关内设计有效的速率限制规则同样重要。
 
-Note that API design is not just URL path design. Most of the time, we need to choose the proper resource names, identifiers, and path patterns. It is equally important to design proper HTTP header fields or to design effective rate-limiting rules within the API gateway. 
+### TCP/IP封装
 
-### TCP/IP encapsulation 
+数据如何通过网络发送？为什么我们在OSI模型中需要这么多层？
 
-How is data sent over the network? Why do we need so many layers in the OSI model?
-
-The diagram below shows how data is encapsulated and de-encapsulated when transmitting over the network.
+下图显示了数据在网络传输时如何被封装和解封装的过程。
 
 <p>
   <img src="images/osi model.jpeg" />
 </p>
 
-Step 1: When Device A sends data to Device B over the network via the HTTP protocol, it is first added an HTTP header at the application layer.
+步骤1：当设备A通过HTTP协议向设备B发送数据时，首先在应用层添加HTTP头。
 
-Step 2: Then a TCP or a UDP header is added to the data. It is encapsulated into TCP segments at the transport layer. The header contains the source port, destination port, and sequence number.
+步骤2：然后在数据上添加TCP或UDP头。在传输层封装成TCP段。头部包含源端口、目标端口和序列号。
 
-Step 3: The segments are then encapsulated with an IP header at the network layer. The IP header contains the source/destination IP addresses.
+步骤3：这些段然后在网络层被添加IP头。IP头包含源/目标IP地址。
 
-Step 4: The IP datagram is added a MAC header at the data link layer, with source/destination MAC addresses.
+步骤4：IP数据报在数据链路层被添加MAC头，包含源/目标MAC地址。
 
-Step 5: The encapsulated frames are sent to the physical layer and sent over the network in binary bits.
+步骤5：封装好的None帧被发送到物理层，并以二进制位的形式通过网络发送。
 
-Steps 6-10: When Device B receives the bits from the network, it performs the de-encapsulation process, which is a reverse processing of the encapsulation process. The headers are removed layer by layer, and eventually, Device B can read the data.
+步骤6-10：当设备B从网络接收到比特时，它执行解封装过程，这是封装过程的逆操作。逐层移除头部，最终设备B可以读取数据。
 
-We need layers in the network model because each layer focuses on its own responsibilities. Each layer can rely on the headers for processing instructions and does not need to know the meaning of the data from the last layer.
+我们需要网络模型中的层，因为每一层都专注于自己的职责。每层可以依赖头部来获取处理指令，而不需要知道上一层数据的含义。
 
-### Why is Nginx called a “reverse” proxy?
 
-The diagram below shows the differences between a 𝐟𝐨𝐫𝐰𝐚𝐫𝐝 𝐩𝐫𝐨𝐱𝐲 and a 𝐫𝐞𝐯𝐞𝐫𝐬𝐞 𝐩𝐫𝐨𝐱𝐲.
+下图展示了**前向代理**和**反向代理**之间的区别。
 
 <p>
   <img src="images/Forward Proxy v.s. Reverse Proxy2x.jpg" style="width: 720px" />
 </p>
 
-A forward proxy is a server that sits between user devices and the internet.
+前向代理是位于用户设备和互联网之间的服务器。
 
-A forward proxy is commonly used for: 
+前向代理常用于：
 
-1. Protecting clients
-2. Circumventing browsing restrictions
-3. Blocking access to certain content
+1. 保护客户端
+2. 绕过浏览限制
+3. 阻止访问某些内容
 
-A reverse proxy is a server that accepts a request from the client, forwards the request to web servers, and returns the results to the client as if the proxy server had processed the request.
+反向代理是接受来自客户端的请求，将请求转发给Web服务器，然后将结果返回给客户端，仿佛代理服务器自己处理了该请求。
 
-A reverse proxy is good for:
+反向代理适合：
 
-1. Protecting servers
-2. Load balancing
-3. Caching static contents
-4. Encrypting and decrypting SSL communications
+1. 保护服务器
+2. 负载均衡
+3. 缓存静态内容
+4. 加密和解密SSL通信
 
-### What are the common load-balancing algorithms?
+### 常见的负载均衡算法有哪些？
 
-The diagram below shows 6 common algorithms. 
+下图展示了六种常见的算法。
 
 <p>
   <img src="images/lb-algorithms.jpg" />
 </p>
 
-- Static Algorithms 
+- **静态算法**
 
-1. Round robin
+1. **轮询（Round robin）**
 
-    The client requests are sent to different service instances in sequential order. The services are usually required to be stateless. 
+    客户端请求按顺序发送到不同的服务实例。服务通常需要是无状态的。
 
-3. Sticky round-robin
+3. **粘性轮询（Sticky round-robin）**
 
-    This is an improvement of the round-robin algorithm. If Alice’s first request goes to service A, the following requests go to service A as well. 
+    这是轮询算法的改进。如果Alice的第一次请求发送到服务A，后续请求也会发送到服务A。
 
-4. Weighted round-robin
+4. **加权轮询（Weighted round-robin）**
 
-    The admin can specify the weight for each service. The ones with a higher weight handle more requests than others. 
+    管理员可以为每个服务指定权重。权重较高的服务会处理更多的请求。
 
-6. Hash
+6. **哈希（Hash）**
 
-    This algorithm applies a hash function on the incoming requests’ IP or URL. The requests are routed to relevant instances based on the hash function result. 
+    这个算法对传入请求的IP或URL应用哈希函数。根据哈希函数的结果，请求被路由到相关实例。
 
-- Dynamic Algorithms
+- **动态算法**
 
-5. Least connections
+5. **最少连接（Least connections）**
 
-    A new request is sent to the service instance with the least concurrent connections. 
+    新的请求被发送到当前连接数最少的服务实例。
 
-7. Least response time
+7. **最短响应时间（Least response time）**
 
-    A new request is sent to the service instance with the fastest response time.
+    新的请求被发送到响应时间最快的服务实例。
 
-### URL, URI, URN - Do you know the differences? 
+### URL、URI、URN - 你知道它们的区别吗？
 
-The diagram below shows a comparison of URL, URI, and URN. 
+下图展示了URL、URI和URN的比较。
 
 <p>
   <img src="images/url-uri-urn.jpg" />
 </p>
 
-- URI 
+- **URI**
 
-URI stands for Uniform Resource Identifier. It identifies a logical or physical resource on the web. URL and URN are subtypes of URI. URL locates a resource, while URN names a resource. 
+    URI代表统一资源标识符。它标识Web上的逻辑或物理资源。URL和URN是URI的子类型。URL定位资源，而URN命名资源。
 
-A URI is composed of the following parts: 
-scheme:[//authority]path[?query][#fragment] 
+    URI由以下部分组成：
+    ```text
+    scheme:[//authority]path[?query][#fragment]
+    ```
 
-- URL 
+- **URL**
 
-URL stands for Uniform Resource Locator, the key concept of HTTP. It is the address of a unique resource on the web. It can be used with other protocols like FTP and JDBC. 
+    URL代表统一资源定位器，是HTTP的关键概念。它是Web上唯一资源的地址。可以与其他协议如FTP和JDBC一起使用。
 
-- URN 
+- **URN**
 
-URN stands for Uniform Resource Name. It uses the urn scheme. URNs cannot be used to locate a resource. A simple example given in the diagram is composed of a namespace and a namespace-specific string. 
+    URN代表统一资源名称。它使用urn方案。URN不能用于定位资源。图中给出的简单示例由命名空间和命名空间特定的字符串组成。
 
-If you would like to learn more detail on the subject, I would recommend [W3C’s clarification](https://www.w3.org/TR/uri-clarification/).
+如果您想更深入了解这个主题，我推荐查阅[W3C的澄清](https://www.w3.org/TR/uri-clarification/)。
+
 
 ## CI/CD
 
-### CI/CD Pipeline Explained in Simple Terms
+### 以简单术语解释CI/CD Pipeline
 
 <p>
   <img src="images/ci-cd-pipeline.jpg" style="width: 680px" />
 </p>
 
-Section 1 - SDLC with CI/CD
+**第1节 - 包含CI/CD的软件开发生命周期（SDLC）**
 
-The software development life cycle (SDLC) consists of several key stages: development, testing, deployment, and maintenance. CI/CD automates and integrates these stages to enable faster and more reliable releases.
+软件开发生命周期（SDLC）包括几个关键阶段：开发、测试、部署和维护。CI/CD自动化并整合这些阶段，以实现更快、更可靠的发布。
 
-When code is pushed to a git repository, it triggers an automated build and test process. End-to-end (e2e) test cases are run to validate the code. If tests pass, the code can be automatically deployed to staging/production. If issues are found, the code is sent back to development for bug fixing. This automation provides fast feedback to developers and reduces the risk of bugs in production.
+当代码推送到git仓库时，它会触发自动构建和测试过程。端到端（e2e）测试用例被运行以验证代码。如果测试通过，代码可以自动部署到暂存/生产环境。如果发现问题，代码会被退回给开发团队进行错误修复。这种自动化提供给开发人员快速反None馈，并降低了生产环境中的错误风险。
 
-Section 2 - Difference between CI and CD
+**第2节 - CI与CD的区别**
 
-Continuous Integration (CI) automates the build, test, and merge process. It runs tests whenever code is committed to detect integration issues early. This encourages frequent code commits and rapid feedback.
+持续集成（CI）自动化构建、测试和合并过程。每当代码提交时运行测试，以尽早发现集成问题。这鼓励频繁提交代码并提供快速反None馈。
 
-Continuous Delivery (CD) automates release processes like infrastructure changes and deployment. It ensures software can be released reliably at any time through automated workflows. CD may also automate the manual testing and approval steps required before production deployment.
+持续交付（CD）自动化发布过程，如基础设施变更和部署。它确保软件可以随时通过自动化工作流程可靠地发布。CD也可能自动化在生产部署之前所需的手动测试和批准步骤。
 
-Section 3 - CI/CD Pipeline
+**第3节 - CI/CD Pipeline**
 
-A typical CI/CD pipeline has several connected stages:
-- The developer commits code changes to the source control
-- CI server detects changes and triggers the build
-- Code is compiled, and tested (unit, integration tests)
-- Test results reported to the developer
-- On success, artifacts are deployed to staging environments
-- Further testing may be done on staging before release
-- CD system deploys approved changes to production
+一个典型的CI/CD管道有几个连接的阶段：
+- 开发者将代码更改提交到源代码控制
+- CI服务器检测到变化并触发构建
+- 代码被编译并进行测试（单元测试、集成测试）
+- 测试结果报告给开发者
+- 成功后，工件被部署到暂存环境
+- 在发布之前可能在暂存环境中进行进一步测试
+- CD系统将批准的更改部署到生产环境
 
-### Netflix Tech Stack (CI/CD Pipeline)
+### Netflix技术栈（CI/CD Pipeline）
 
 <p>
   <img src="images/netflix-ci-cd.jpg" style="width: 720px" />
 </p>
 
-Planning: Netflix Engineering uses JIRA for planning and Confluence for documentation. 
+规划：Netflix工程使用JIRA进行规划和Confluence进行文档记录。
 
-Coding: Java is the primary programming language for the backend service, while other languages are used for different use cases.  
+编码：Java是后端服务的主要编程语言，而其他语言用于不同的用例。
 
-Build: Gradle is mainly used for building, and Gradle plugins are built to support various use cases.  
+构建：主要使用Gradle进行构建，并构建了Gradle插件以支持各种用例。
 
-Packaging: Package and dependencies are packed into an Amazon Machine Image (AMI) for release. 
+打包：将包和依赖项打包到Amazon Machine Image（AMI）中以进行发布。
 
-Testing: Testing emphasizes the production culture's focus on building chaos tools.  
+测试：测试强调生产文化的重点，即构建混乱工具。
 
-Deployment: Netflix uses its self-built Spinnaker for canary rollout deployment.  
+部署：Netflix使用自建的Spinnaker进行金丝雀发布部署。
 
-Monitoring: The monitoring metrics are centralized in Atlas, and Kayenta is used to detect anomalies.  
+监控：监控指标集中在Atlas中，使用Kayenta检测异常。
 
-Incident report: Incidents are dispatched according to priority, and PagerDuty is used for incident handling. 
+事件报告：根据优先级分派事件，并使用PagerDuty处理事件。
 
-## Architecture patterns
+## 架构模式
 
-### MVC, MVP, MVVM, MVVM-C, and VIPER
-These architecture patterns are among the most commonly used in app development, whether on iOS or Android platforms. Developers have introduced them to overcome the limitations of earlier patterns. So, how do they differ? 
+### MVC, MVP, MVVM, MVVM-C和VIPER
+这些架构模式在iOS或Android平台的应用程序开发中是最常用的，开发者们引入了它们以克服早期模式的局限性。那么，它们有何不同？
 
 <p>
   <img src="images/client arch patterns.png" style="width: 720px" />
 </p>
 
-- MVC, the oldest pattern, dates back almost 50 years 
-- Every pattern has a "view" (V) responsible for displaying content and receiving user input 
-- Most patterns include a "model" (M) to manage business data 
-- "Controller," "presenter," and "view-model" are translators that mediate between the view and the model ("entity" in the VIPER pattern)
+- MVC是最古老的模式，历史可以追None溯到近50年
+- 每个模式都有一个“视图”（V），负责显示内容和接收用户输入
+- 大多数模式包括一个“模型”（M）来管理业务数据
+- “控制器”、“演示者”和“视图模型”作为翻译器，在视图和模型之间进行中介（在VIPER模式中是“实体”）
 
-### 18 Key Design Patterns Every Developer Should Know
+### 每个开发者都应该知道的18个关键设计模式
 
-Patterns are reusable solutions to common design problems, resulting in a smoother, more efficient development process. They serve as blueprints for building better software structures. These are some of the most popular patterns: 
+模式是常见设计问题的可重用解决方案，导致开发过程更加顺畅、更有效率。它们作为构建更好软件结构的蓝图。以下是一些最流行的模式：
 
 <p>
   <img src="images/18-oo-patterns.png" />
 </p>
 
-- Abstract Factory: Family Creator - Makes groups of related items. 
-- Builder: Lego Master - Builds objects step by step, keeping creation and appearance separate. 
-- Prototype: Clone Maker - Creates copies of fully prepared examples. 
-- Singleton: One and Only - A special class with just one instance. 
-- Adapter: Universal Plug - Connects things with different interfaces. 
-- Bridge: Function Connector - Links how an object works to what it does. 
-- Composite: Tree Builder - Forms tree-like structures of simple and complex parts. 
-- Decorator: Customizer - Adds features to objects without changing their core. 
-- Facade: One-Stop-Shop - Represents a whole system with a single, simplified interface. 
-- Flyweight: Space Saver - Shares small, reusable items efficiently. 
-- Proxy: Stand-In Actor - Represents another object, controlling access or actions. 
-- Chain of Responsibility: Request Relay - Passes a request through a chain of objects until handled. 
-- Command: Task Wrapper - Turns a request into an object, ready for action. 
-- Iterator: Collection Explorer - Accesses elements in a collection one by one. 
-- Mediator: Communication Hub - Simplifies interactions between different classes. 
-- Memento: Time Capsule - Captures and restores an object's state. 
-- Observer: News Broadcaster - Notifies classes about changes in other objects. 
-- Visitor: Skillful Guest - Adds new operations to a class without altering it.
+- 抽象工厂：家庭创造者 - 制作相关项目的组。
+- 建造者：乐高大师 - 分步骤构建对象，保持创建与外观分离。
+- 原型：克隆制造者 - 创建完全准备好的实例的副本。
+- 单例：独一无二 - 只有一个实例的特殊类。
+- 适配器：通用插头 - 连接具有不同接口的事物。
+- 桥接：功能连接器 - 链接对象的功能与其执行方式。
+- 组合：树形结构建造者 - 形成简单和复杂部分的树状结构。
+- 装饰者：定制者 - 在不改变核心的情况下添加对象的功能。
+- 外观：一站式服务 - 用一个简化的接口代表整个系统。
+- 享元：空间节省者 - 高效共享小型、可重用项目。
+- 代理：替身演员 - 代表另一个对象，控制访问或行为。
+- 责任链：请求中继 - 通过一系列对象传递请求直到处理。
+- 命令：任务包装器 - 将请求变成一个对象，准备执行。
+- 迭代器：集合探索者 - 逐个访问集合中的元素。
+- 中介者：沟通中心 - 简化不同类之间的交互。
+- 备忘录：时间None胶囊 - 捕获和恢复对象的状态。
+- 观察者：新闻广播 - 通知类关于其他对象的变化。
+- 访问者：熟练的访客 - 向类添加新操作而不改变它。
 
-## Database
+## 数据库
 
-### A nice cheat sheet of different databases in cloud services
+### 云服务中不同数据库的简明速查表
 
 <p>
   <img src="images/cloud-dbs2.png" />
 </p>
 
-Choosing the right database for your project is a complex task. Many database options, each suited to distinct use cases, can quickly lead to decision fatigue. 
+为您的项目选择正确的数据库是一项复杂的任务。许多数据库选项，每个适合不同的用例，很快会导致决策疲劳。
 
-We hope this cheat sheet provides high-level direction to pinpoint the right service that aligns with your project's needs and avoid potential pitfalls. 
+我们希望这个速查表能提供高层次的指导，帮助您找到与项目需求相匹配的服务，并避免潜在的陷None阱。
 
-Note: Google has limited documentation for their database use cases. Even though we did our best to look at what was available and arrived at the best option, some of the entries may need to be more accurate. 
+注意：Google对其数据库用例的文档有限。尽管我们尽最大努力查看可用信息并得出最佳选择，但某些条目可能不够准确。
 
-### 8 Data Structures That Power Your Databases
+### 8种支持数据库的数据结构
 
-The answer will vary depending on your use case. Data can be indexed in memory or on disk. Similarly, data formats vary, such as numbers, strings, geographic coordinates, etc. The system might be write-heavy or read-heavy. All of these factors affect your choice of database index format. 
+答案将根据您的用例而有所不同。数据可以在内存中或磁盘上编制索引。同样，数据格式也各不相同，如数字、字符串、地理坐标等。系统可能是写入密集型或读取密集型。这些因素都会影响您选择数据库索引格式。
 
 <p>
   <img src="images/8-ds-db.jpg" />
 </p>
 
-The following are some of the most popular data structures used for indexing data: 
+以下是一些最流行的用于索引数据的数据结构：
 
-- Skiplist: a common in-memory index type. Used in Redis 
-- Hash index: a very common implementation of the “Map” data structure (or “Collection”) 
-- SSTable: immutable on-disk “Map” implementation 
-- LSM tree: Skiplist + SSTable. High write throughput 
-- B-tree: disk-based solution. Consistent read/write performance 
-- Inverted index: used for document indexing. Used in Lucene 
-- Suffix tree: for string pattern search 
-- R-tree: multi-dimension search, such as finding the nearest neighbor 
+- 跳表：常见的内存索引类型。用于Redis
+- 哈希索引：非常常见的“Map”数据结构（或“集合”）实现
+- SSTable：不可变的磁盘“Map”实现
+- LSM树：跳表 + SSTable。高写入吞吐量
+- B树：基于磁盘的解决方案。一致的读写性能
+- 倒排索引：用于文档索引。用于Lucene
+- 后缀树：用于字符串模式搜索
+- R树：多维搜索，例如查找最近邻居
 
-### How is an SQL statement executed in the database?
+### SQL语句在数据库中是如何执行的？
 
-The diagram below shows the process. Note that the architectures for different databases are different, the diagram demonstrates some common designs.
+下面的图表展示了这个过程。请注意，不同数据库的架构不同，图表展示了一些常见的设计。
 
 <p>
   <img src="images/sql execution order in db.jpeg" style="width: 580px" />
 </p>
 
 
-Step 1 - A SQL statement is sent to the database via a transport layer protocol (e.g.TCP).
+步骤1 - 通过传输层协议（如TCP）将SQL语句发送到数据库。
 
-Step 2 - The SQL statement is sent to the command parser, where it goes through syntactic and semantic analysis, and a query tree is generated afterward.
+步骤2 - SQL语句被发送到命令解析器，在那里它经过语法和语义分析，随后生成查询树。
 
-Step 3 - The query tree is sent to the optimizer. The optimizer creates an execution plan. 
+步骤3 - 查询树被发送到优化器。优化器创建一个执行计划。
 
-Step 4 - The execution plan is sent to the executor. The executor retrieves data from the execution.
+步骤4 - 执行计划被发送到执行器。执行器从执行中检索数据。
 
-Step 5 - Access methods provide the data fetching logic required for execution, retrieving data from the storage engine. 
+步骤5 - 访问方法提供执行所需的数据获取逻辑，从存储引擎中检索数据。
 
-Step 6 - Access methods decide whether the SQL statement is read-only. If the query is read-only (SELECT statement), it is passed to the buffer manager for further processing. The buffer manager looks for the data in the cache or data files.
+步骤6 - 访问方法决定SQL语句是否为只读。如果查询是只读的（SELECT语句），它会被传递给缓冲区管理器进行进一步处理。缓冲区管理器在缓存或数据文件中查找数据。
 
-Step 7 - If the statement is an UPDATE or INSERT, it is passed to the transaction manager for further processing.
+步骤7 - 如果语句是UPDATE或INSERT，它会被传递给事务管理器进行进一步处理。
 
-Step 8 - During a transaction, the data is in lock mode. This is guaranteed by the lock manager. It also ensures the transaction’s ACID properties. 
+步骤8 - 在事务过程中，数据处于锁定模式。这由锁管理器保证。它还确保了事务的ACID属性。
 
-###  CAP theorem
+### CAP定理
 
-The CAP theorem is one of the most famous terms in computer science, but I bet different developers have different understandings. Let’s examine what it is and why it can be confusing. 
+CAP定理是计算机科学中最著名的术语之一，但我想不同的开发人员对此有不同的理解。让我们看看它是什么以及为什么它可能令人困惑。
 
 <p>
   <img src="images/cap theorem.jpeg" />
 </p>
 
-CAP theorem states that a distributed system can't provide more than two of these three guarantees simultaneously.
+CAP定理指出，一个分布式系统不能同时提供这三个保证中的两个。
 
-**Consistency**: consistency means all clients see the same data at the same time no matter which node they connect to.
+**一致性**：一致性意味着所有客户端在同一时间看到相同的数据，无论他们连接到哪个节点。
 
-**Availability**: availability means any client that requests data gets a response even if some of the nodes are down.
+**可用性**：可用性意味着任何请求数据的客户端即使在某些节点出现故障的情况下也能得到响应。
 
-**Partition Tolerance**: a partition indicates a communication break between two nodes. Partition tolerance means the system continues to operate despite network partitions. 
+**分区容忍性**：分区表示两个节点之间的通信中断。分区容忍性意味着系统在网络分区的情况下继续运行。
 
-The “2 of 3” formulation can be useful, **but this simplification could be misleading**.
+“2选3”的表述可能有用，**但这种简化可能具有误导性**。
 
-1. Picking a database is not easy. Justifying our choice purely based on the CAP theorem is not enough. For example, companies don't choose Cassandra for chat applications simply because it is an AP system. There is a list of good characteristics that make Cassandra a desirable option for storing chat messages. We need to dig deeper.
+1. 选择数据库并不容易。仅仅基于CAP定理来选择数据库是不够的。例如，公司选择Cassandra并不是因为它是一个AP系统，而是因为它有一些好的特性，使其成为存储聊天消息的理想选择。我们需要深入探讨。
 
-2. “CAP prohibits only a tiny part of the design space: perfect availability and consistency in the presence of partitions, which are rare”. Quoted from the paper: CAP Twelve Years Later: How the “Rules” Have Changed.
+2. “CAP只禁止了设计空间中的一小部分：在分区存在的情况下完美的可用性和一致性，这是罕见的”。引用自论文：《CAP十二年后：规则如何改变》。
 
-3. The theorem is about 100% availability and consistency. A more realistic discussion would be the trade-offs between latency and consistency when there is no network partition. See PACELC theorem for more details.
+3. 定理是关于100%的可用性和一致性。一个更现实的讨论是在没有网络分区的情况下，延迟和一致性之间的权衡。请参阅PACELC定理了解更多详情。
 
-**Is the CAP theorem actually useful?**
+**CAP定理实际上有用吗？**
 
-I think it is still useful as it opens our minds to a set of tradeoff discussions, but it is only part of the story. We need to dig deeper when picking the right database.
+我认为它仍然有用，因为它开启了我们对一系列权衡讨论的思考，但它只是故事的一部分。我们在选择合适的数据库时需要更深入的了解。
 
-### Types of Memory and Storage
+### 内存和存储的类型
 
 <p>
   <img src="images/Types_of_Memory_and_Storage.jpeg" style="width: 420px" />
 </p>
 
 
-### Visualizing a SQL query
+### 可视化SQL查询
 
 <p>
   <img src="images/sql-execution-order.jpg" style="width: 580px" />
 </p>
 
-SQL statements are executed by the database system in several steps, including: 
+SQL语句由数据库系统通过几个步骤来执行，包括：
 
-- Parsing the SQL statement and checking its validity 
-- Transforming the SQL into an internal representation, such as relational algebra 
-- Optimizing the internal representation and creating an execution plan that utilizes index information 
-- Executing the plan and returning the results 
+- 解析SQL语句并检查其有效性
+- 将SQL转换为内部表示，如关系代数
+- 优化内部表示并利用索引信息创建执行计划
+- 执行计划并返回结果
 
-The execution of SQL is highly complex and involves many considerations, such as: 
+SQL的执行非常复杂，涉及许多考虑因素，如：
 
-- The use of indexes and caches 
-- The order of table joins 
-- Concurrency control 
-- Transaction management 
+- 索引和缓存的使用
+- 表连接的顺序
+- 并发控制
+- 事务管理
 
-### SQL language 
+### SQL语言
 
-In 1986, SQL (Structured Query Language) became a standard. Over the next 40 years, it became the dominant language for relational database management systems. Reading the latest standard (ANSI SQL 2016) can be time-consuming. How can I learn it? 
+在1986年，SQL（结构化查询语言）成为标准。在接下来的40年里，它成为了关系数据库管理系统的主导语言。阅读最新的标准（ANSI SQL 2016）可能会花费很多时间。我如何学习它？
 
 <p>
   <img src="images/how-to-learn-sql.jpg" />
 </p>
 
-There are 5 components of the SQL language: 
+SQL语言有5个组成部分：
 
-- DDL: data definition language, such as CREATE, ALTER, DROP 
-- DQL: data query language, such as SELECT 
-- DML: data manipulation language, such as INSERT, UPDATE, DELETE 
-- DCL: data control language, such as GRANT, REVOKE 
-- TCL: transaction control language, such as COMMIT, ROLLBACK 
+- DDL：数据定义语言，如CREATE, ALTER, DROP
+- DQL：数据查询语言，如SELECT
+- DML：数据操作语言，如INSERT, UPDATE, DELETE
+- DCL：数据控制语言，如GRANT, REVOKE
+- TCL：事务控制语言，如COMMIT, ROLLBACK
 
-For a backend engineer, you may need to know most of it. As a data analyst, you may need to have a good understanding of DQL. Select the topics that are most relevant to you. 
+对于后端工程师来说，你可能需要了解其中的大部分内容。作为数据分析师，你可能需要很好地理解DQL。选择与你最相关的课题。
 
-## Cache
+## 缓存
 
-### Data is cached everywhere
+### 数据无处不在被缓存
 
-This diagram illustrates where we cache data in a typical architecture.
+这个图表说明了在一个典型架构中我们缓存数据的地方。
 
 <p>
   <img src="images/where do we cache data.jpeg" style="width: 720px" />
 </p>
 
+有**多个层级**沿流程。
 
-There are **multiple layers** along the flow.
+1. **客户端应用**：HTTP响应可以被浏览器缓存。我们第一次通过HTTP请求数据时，数据会随着HTTP头的过期策略一同返回；再次请求数据时，客户端应用会首先尝试从浏览器缓存中检索数据。
+2. **CDN**：CDN缓存静态Web资源。客户端可以从附近的CDN节点获取数据。
+3. **负载均衡器**：负载均衡器也可以缓存资源。
+4. **消息基础设施**：消息代理首先将消息存储在磁盘上，然后消费者以自己的节奏检索它们。根据保留策略，数据会在Kafka集群中缓存一段时间。
+5. **服务**：在服务中有多个缓存层。如果数据未在CPU缓存中，服务将尝试从内存中检索数据。有时服务还有第二级缓存来存储磁盘上的数据。
+6. **分布式缓存**：如Redis的分布式缓存将多个服务的键值对存储在内存中。它提供了比数据库更好的读写性能。
+7. **全文搜索**：我们有时需要使用全文搜索引擎如Elastic Search进行文档搜索或日志搜索。数据的一份副本也会被索引到搜索引擎中。
+8. **数据库**：即使在数据库中，我们也有不同的缓存层：
+   - **预写日志(WAL)**：数据首先写入WAL然后构建B树索引
+   - **缓冲池**：分配的内存区域用于缓存查询结果
+   - **物化视图**：预先计算查询结果并将其存储在数据库表中以提高查询性能
+   - **事务日志**：记录所有事务和数据库更新
+   - **复制日志**：用于记录数据库集群中的复制状态
 
-1. Client apps: HTTP responses can be cached by the browser. We request data over HTTP for the first time, and it is returned with an expiry policy in the HTTP header; we request data again, and the client app tries to retrieve the data from the browser cache first.
-2. CDN: CDN caches static web resources. The clients can retrieve data from a CDN node nearby.
-3. Load Balancer: The load Balancer can cache resources as well.
-4. Messaging infra: Message brokers store messages on disk first, and then consumers retrieve them at their own pace. Depending on the retention policy, the data is cached in Kafka clusters for a period of time.
-5. Services: There are multiple layers of cache in a service. If the data is not cached in the CPU cache, the service will try to retrieve the data from memory. Sometimes the service has a second-level cache to store data on disk.
-6. Distributed Cache: Distributed cache like Redis holds key-value pairs for multiple services in memory. It provides much better read/write performance than the database.
-7. Full-text Search: we sometimes need to use full-text searches like Elastic Search for document search or log search. A copy of data is indexed in the search engine as well.
-8. Database: Even in the database, we have different levels of caches:
-- WAL(Write-ahead Log): data is written to WAL first before building the B tree index
-- Bufferpool: A memory area allocated to cache query results
-- Materialized View: Pre-compute query results and store them in the database tables for better query performance
-- Transaction log: record all the transactions and database updates
-- Replication Log: used to record the replication state in a database cluster
+### 为什么Redis如此之快？
 
-### Why is Redis so fast? 
-
-There are 3 main reasons as shown in the diagram below.
+以下图表展示了Redis快的3个主要原因。
 
 <p>
   <img src="images/why_redis_fast.jpeg" />
 </p>
 
+1. **Redis是基于RAM的数据存储**。RAM的访问速度至少比随机磁盘访问快1000倍。
+2. **Redis利用了IO多路复用和单线程执行循环来提高执行效率**。
+3. **Redis使用了几种高效的底层数据结构**。
 
-1. Redis is a RAM-based data store. RAM access is at least 1000 times faster than random disk access.
-2. Redis leverages IO multiplexing and single-threaded execution loop for execution efficiency.
-3. Redis leverages several efficient lower-level data structures.
+问题：另一个流行的内存存储是Memcached。你知道Redis和Memcached的区别吗？
 
-Question: Another popular in-memory store is Memcached. Do you know the differences between Redis and Memcached?
+您可能已经注意到这个图表的风格与我之前的None帖子不同。请告诉我您更喜欢哪一个。
 
-You might have noticed the style of this diagram is different from my previous posts. Please let me know which one you prefer.
-
-### How can Redis be used?
+### Redis可以怎么用？
 
 <p>
   <img src="images/top-redis-use-cases.jpg" style="width: 520px" />
 </p>
 
+Redis不仅仅是缓存。
 
-There is more to Redis than just caching. 
+如图所示，Redis可以用于多种场景。
 
-Redis can be used in a variety of scenarios as shown in the diagram. 
+- **会话**
 
-- Session 
+  我们可以使用Redis在不同的服务之间共享用户会话数据。
 
-  We can use Redis to share user session data among different services. 
+- **缓存**
 
-- Cache 
+  我们可以使用Redis来缓存对象或页面，特别是热点数据。
 
-  We can use Redis to cache objects or pages, especially for hotspot data. 
+- **分布式锁**
 
-- Distributed lock 
+  我们可以使用Redis字符串在分布式服务中获取锁。
 
-  We can use a Redis string to acquire locks among distributed services. 
+- **计数器**
 
-- Counter 
+  我们可以计数文章的点赞数或阅读次数。
 
-  We can count how many likes or how many reads for articles. 
+- **限速器**
 
-- Rate limiter 
+  我们可以对某些用户IP应用限速器。
 
-  We can apply a rate limiter for certain user IPs. 
+- **全局ID生成器**
 
-- Global ID generator 
+  我们可以使用Redis的Int类型来生成全局ID。
 
-  We can use Redis Int for global ID. 
+- **购物车**
 
-- Shopping cart 
+  我们可以使用Redis的Hash类型来表示购物车中的键值对。
 
-  We can use Redis Hash to represent key-value pairs in a shopping cart. 
+- **计算用户留存率**
 
-- Calculate user retention 
+  我们可以使用Bitmap来表示用户每日登录情况并计算用户留存率。
 
-  We can use Bitmap to represent the user login daily and calculate user retention. 
+- **消息队列**
 
-- Message queue 
+  我们可以使用List来实现消息队列。
 
-  We can use List for a message queue. 
+- **排行榜**
 
-- Ranking 
+  我们可以使用ZSet来排序文章。
 
-  We can use ZSet to sort the articles. 
+### 顶级缓存策略
 
-### Top caching strategies
-
-Designing large-scale systems usually requires careful consideration of caching. 
-Below are five caching strategies that are frequently utilized. 
+设计大型系统通常需要仔细考虑缓存策略。
+以下是常用的五种缓存策略。
 
 <p>
   <img src="images/top_caching_strategy.jpeg" style="width: 680px" />
 </p>
 
+## 微服务架构
 
-
-## Microservice architecture
-
-### What does a typical microservice architecture look like? 
+### 典型的微服务架构是什么样的？
 
 <p>
   <img src="images/typical-microservice-arch.jpg" style="width: 520px" />
 </p>
 
+下图展示了一个典型的微服务架构。
 
-The diagram below shows a typical microservice architecture. 
+- **负载均衡器**：这将传入流量分发到多个后端服务。
+- **CDN（内容分发网络）**：CDN是一组地理位置分散的服务器，存储静态内容以加快交付速度。客户端首先在CDN中查找内容，然后再访问后端服务。
+- **API网关**：处理传入请求并将其路由到相关服务。它与身份提供者和服务发现通信。
+- **身份提供者**：处理用户的认证和授权。
+- **服务注册与发现**：微服务的注册和发现在此组件中进行，API网关在该组件中查找相关服务进行通信。
+- **管理**：此组件负责监控服务。
+- **微服务**：微服务按不同领域设计和部署。每个领域有自己的数据库。API网关通过REST API或其他协议与微服务通信，同一领域内的微服务之间使用RPC（远程过程调用）通信。
 
-- Load Balancer: This distributes incoming traffic across multiple backend services. 
-- CDN (Content Delivery Network): CDN is a group of geographically distributed servers that hold static content for faster delivery. The clients look for content in CDN first, then progress  to backend services.
-- API Gateway: This handles incoming requests and routes them to the relevant services. It talks to the identity provider and service discovery.
-- Identity Provider: This handles authentication and authorization for users. 
-- Service Registry & Discovery: Microservice registration and discovery happen in this component, and the API gateway looks for relevant services in this component to talk to. 
-- Management: This component is responsible for monitoring the services.
-- Microservices: Microservices are designed and deployed in different domains. Each domain has its own database. The API gateway talks to the microservices via REST API or other protocols, and the microservices within the same domain talk to each other using RPC (Remote Procedure Call).
+微服务的优点：
 
-Benefits of microservices:
+- 可以快速设计、部署和水平扩展。
+- 每个领域可以由专职团队独立维护。
+- 业务需求可以在每个领域内定制并得到更好的支持。
 
-- They can be quickly designed, deployed, and horizontally scaled.
-- Each domain can be independently maintained by a dedicated team.
-- Business requirements can be customized in each domain and better supported, as a result.
+### 微服务最佳实践
 
-### Microservice Best Practices
-
-A picture is worth a thousand words: 9 best practices for developing microservices.
+一图胜千言：开发微服务的9个最佳实践。
 
 <p>
   <img src="images/microservice-best-practices.jpeg" />
 </p>
 
- 
-When we develop microservices, we need to follow the following best practices: 
+在开发微服务时，我们需要遵循以下最佳实践：
 
-1. Use separate data storage for each microservice 
-2. Keep code at a similar level of maturity 
-3. Separate build for each microservice 
-4. Assign each microservice with a single responsibility 
-5. Deploy into containers 
-6. Design stateless services 
-7. Adopt domain-driven design
-8. Design micro frontend 
-9. Orchestrating microservices 
+1. 为每个微服务使用独立的数据存储
+2. 保持代码的成熟度水平相似
+3. 每个微服务有独立的构建
+4. 给每个微服务分配单一职责
+5. 部署到容器中
+6. 设计无状态服务
+7. 采用领域驱动设计
+8. 设计微前端
+9. 协调微服务
 
-### What tech stack is commonly used for microservices?
+### 微服务通常使用的技术栈是什么？
 
-Below you will find a diagram showing the microservice tech stack, both for the development phase and for production.
+下图展示了微服务的技术栈，适用于开发阶段和生产环境。
 
 <p>
   <img src="images/microservice-tech.jpeg" />
 </p>
 
+None▶️ **预生产**
 
-▶️ 𝐏𝐫𝐞-𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧
+- 定义API - 这在前端和后端之间建立了一个契约。我们可以使用Postman或OpenAPI进行此操作。
+- 开发 - Node.js或React用于前端开发，Java/Python/Go用于后端开发。我们还需要根据API定义更改API网关的配置。
+- 持续集成 - 使用JUnit和Jenkins进行自动化测试。代码被打包成Docker镜像并部署为微服务。
 
-- Define API - This establishes a contract between frontend and backend. We can use Postman or OpenAPI for this.
-- Development - Node.js or react is popular for frontend development, and java/python/go for backend development. Also, we need to change the configurations in the API gateway according to API definitions.
-- Continuous Integration - JUnit and Jenkins for automated testing. The code is packaged into a Docker image and deployed as microservices.
+None▶️ **生产环境**
 
-▶️ 𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧
+- NGinx是负载均衡器的常见选择。Cloudflare提供CDN（内容分发网络）。
+- **API网关** - 我们可以使用Spring Boot作为网关，使用Eureka/Zookeeper进行服务发现。
+- 微服务部署在云端。我们可以在AWS、Microsoft Azure或Google GCP之间选择。
+- **缓存和全文搜索** - Redis是缓存键值对的常见选择。Elasticsearch用于全文搜索。
+- **通信** - 为了让服务之间通信，我们可以使用消息基础设施Kafka或RPC。
+- **持久化** - 我们可以使用MySQL或PostgreSQL作为关系数据库，Amazon S3用于对象存储。如果需要，也可以使用Cassandra作为宽列存储。
+- **管理与监控** - 为了管理众多微服务，常用的运维工具包括Prometheus、Elastic Stack和Kubernetes。
 
-- NGinx is a common choice for load balancers. Cloudflare provides CDN (Content Delivery Network). 
-- API Gateway - We can use spring boot for the gateway, and use Eureka/Zookeeper for service discovery.
-- The microservices are deployed on clouds. We have options among AWS, Microsoft Azure, or Google GCP.
-Cache and Full-text Search - Redis is a common choice for caching key-value pairs. Elasticsearch is used for full-text search.
-- Communications - For services to talk to each other, we can use messaging infra Kafka or RPC.
-- Persistence - We can use MySQL or PostgreSQL for a relational database, and Amazon S3 for object store. We can also use Cassandra for the wide-column store if necessary.
-- Management & Monitoring - To manage so many microservices, the common Ops tools include Prometheus, Elastic Stack, and Kubernetes.
+### 为什么Kafka快？
 
-### Why is Kafka fast
-
-There are many design decisions that contributed to Kafka’s performance. In this post, we’ll focus on two. We think these two carried the most weight.
+有许多设计决策促成了Kafka的高性能。在这篇文章中，我们将重点介绍两个。我们认为这两个设计决策对Kafka的性能影响最大。
 
 <p>
   <img src="images/why_is_kafka_fast.jpeg" />
 </p>
 
-1. The first one is Kafka’s reliance on Sequential I/O.
-2. The second design choice that gives Kafka its performance advantage is its focus on efficiency: zero copy principle.
- 
-The diagram illustrates how the data is transmitted between producer and consumer, and what zero-copy means.
- 
-- Step 1.1 - 1.3: Producer writes data to the disk 
-- Step 2: Consumer reads data without zero-copy
+1. 第一个是Kafka对顺序IO的依赖。
+2. 第二个给Kafka性能优势的设计选择是它对效率的关注：零None拷贝原则。
 
-2.1 The data is loaded from disk to OS cache
+图表说明了数据在生产者和消费者之间的传输方式，以及零None拷贝的含义。
 
-2.2 The data is copied from OS cache to Kafka application
+- **步骤1.1 - 1.3：生产者将数据写入磁盘**
+- **步骤2：消费者无零None拷贝读取数据**
 
-2.3 Kafka application copies the data into the socket buffer 
+  2.1 从磁盘加载数据到OS缓存
 
-2.4 The data is copied from socket buffer to network card
+  2.2 将数据从OS缓存复制到Kafka应用程序
 
-2.5 The network card sends data out to the consumer
+  2.3 Kafka应用程序将数据复制到套接字缓冲区
 
- 
-- Step 3: Consumer reads data with zero-copy
+  2.4 数据从套接字缓冲区复制到网络卡
 
-3.1: The data is loaded from disk to OS cache
-3.2 OS cache directly copies the data to the network card via sendfile() command
-3.3 The network card sends data out to the consumer
- 
-Zero copy is a shortcut to save the multiple data copies between application context and kernel context.
+  2.5 网络卡将数据发送给消费者
 
-## Payment systems
+- **步骤3：消费者使用零None拷贝读取数据**
 
-### How to learn payment systems?
+  3.1：从磁盘加载数据到OS缓存
+  3.2 OS缓存通过sendfile()命令直接将数据复制到网络卡
+  3.3 网络卡将数据发送给消费者
+
+零None拷贝是一种快捷方式，节省了应用程序上下文和内核上下文之间的多次数据复制。
+
+## 支付系统
+
+### 如何学习支付系统？
 
 <p>
   <img src="images/learn-payments.jpg" />
 </p>
 
-###  Why is the credit card called “the most profitable product in banks”? How does VISA/Mastercard make money? 
+### 为什么信用卡被称为“银行中最赚钱的产品”？VISA/Mastercard是如何赚钱的？
 
-The diagram below shows the economics of the credit card payment flow.
+下面的图表显示了信用卡支付流程的经济学。
 
 <p>
   <img src="images/how does visa makes money.jpg" style="width: 640px" />
 </p>
 
-1.&nbsp;&nbsp;The cardholder pays a merchant $100 to buy a product.
+1.&nbsp;&nbsp;持卡人向商家支付100美元购买商品。
 
-2.&nbsp;The merchant benefits from the use of the credit card with higher sales volume and needs to compensate the issuer and the card network for providing the payment service. The acquiring bank sets a fee with the merchant, called the “merchant discount fee.”
+2.&nbsp;商家通过使用信用卡获得了更高的销售量，并需要向发行银行和卡网络支付费用以提供支付服务。收单银行与商家设定了一个费用，称为“商家折扣费”。
 
-3 - 4. The acquiring bank keeps $0.25 as the acquiring markup, and $1.75 is paid to the issuing bank as the interchange fee. The merchant discount fee should cover the interchange fee. 
+3 - 4. 收单银行保留0.25美元作为收单标记，1.75美元作为交换费支付给发行银行。商家折扣费应覆盖交换费。
 
-  The interchange fee is set by the card network because it is less efficient for each issuing bank to negotiate fees with each merchant.
+  交换费由卡网络设定，因为每个发行银行与每个商家谈判费用效率较低。
 
-5.&nbsp;&nbsp;The card network sets up the network assessments and fees with each bank, which pays the card network for its services every month. For example, VISA charges a 0.11% assessment, plus a $0.0195 usage fee, for every swipe.
+5.&nbsp;&nbsp;卡网络与每家银行设定网络评估和费用，每月向卡网络支付其服务费用。例如，VISA对每次刷卡收取0.11%的评估费，加上0.0195美元的使用费。
 
-6.&nbsp;&nbsp;The cardholder pays the issuing bank for its services.
+6.&nbsp;&nbsp;持卡人向发行银行支付其服务费用。
 
-Why should the issuing bank be compensated?
+为什么发行银行应该得到补偿？
 
-- The issuer pays the merchant even if the cardholder fails to pay the issuer. 
-- The issuer pays the merchant before the cardholder pays the issuer.
-- The issuer has other operating costs, including managing customer accounts, providing statements, fraud detection, risk management, clearing & settlement, etc. 
+- 即使持卡人未能向发行银行支付，发行银行也会向商家支付。
+- 发行银行在持卡人支付之前就向商家支付。
+- 发行银行还有其他运营成本，包括管理客户账户、提供对账单、欺None诈检测、风险管理、清算和结算等。
 
-### How does VISA work when we swipe a credit card at a merchant’s shop?
+### 当我们在商店刷信用卡时，VISA是如何工作的？
 
 <p>
   <img src="images/visa_payment.jpeg" />
 </p>
 
+VISA、Mastercard和美国运通充当卡网络进行资金清算和结算。卡收单银行和发卡银行可以是——而且通常是——不同的。如果没有中介，银行需要逐一与所有其他银行结算交易，这是相当低效的。
 
-VISA, Mastercard, and American Express act as card networks for the clearing and settling of funds. The card acquiring bank and the card issuing bank can be – and often are – different. If banks were to settle transactions one by one without an intermediary, each bank would have to settle the transactions with all the other banks. This is quite inefficient.   
- 
-The diagram below shows VISA’s role in the credit card payment process. There are two flows involved. Authorization flow happens when the customer swipes the credit card. Capture and settlement flow happens when the merchant wants to get the money at the end of the day.
- 
-- Authorization Flow
+下图展示了VISA在信用卡支付流程中的作用。涉及两个流程。授权流程发生在客户刷卡时。捕获和结算流程发生在商家在当天结束时想要收取款项时。
 
-Step 0: The card issuing bank issues credit cards to its customers. 
- 
-Step 1: The cardholder wants to buy a product and swipes the credit card at the Point of Sale (POS) terminal in the merchant’s shop.
- 
-Step 2: The POS terminal sends the transaction to the acquiring bank, which has provided the POS terminal.
- 
-Steps 3 and 4: The acquiring bank sends the transaction to the card network, also called the card scheme. The card network sends the transaction to the issuing bank for approval.
- 
-Steps 4.1, 4.2 and 4.3: The issuing bank freezes the money if the transaction is approved. The approval or rejection is sent back to the acquirer, as well as the POS terminal. 
- 
-- Capture and Settlement Flow
+- 授权流程
 
-Steps 1 and 2: The merchant wants to collect the money at the end of the day, so they hit ”capture” on the POS terminal. The transactions are sent to the acquirer in batch. The acquirer sends the batch file with transactions to the card network.
- 
-Step 3: The card network performs clearing for the transactions collected from different acquirers, and sends the clearing files to different issuing banks.
- 
-Step 4: The issuing banks confirm the correctness of the clearing files, and transfer money to the relevant acquiring banks.
- 
-Step 5: The acquiring bank then transfers money to the merchant’s bank. 
- 
-Step 4: The card network clears up the transactions from different acquiring banks. Clearing is a process in which mutual offset transactions are netted, so the number of total transactions is reduced.
- 
-In the process, the card network takes on the burden of talking to each bank and receives service fees in return.
+步骤0：发卡银行向其客户发行信用卡。
 
-### Payment Systems Around The World Series (Part 1): Unified Payments Interface (UPI) in India
+步骤1：持卡人想购买商品并在商店的销售点（POS）终端刷信用卡。
 
+步骤2：POS终端将交易发送给提供POS终端的收单银行。
 
-What’s UPI? UPI is an instant real-time payment system developed by the National Payments Corporation of India.
+步骤3和4：收单银行将交易发送给卡网络，也称为卡计划。卡网络将交易发送给发行银行进行批准。
 
-It accounts for 60% of digital retail transactions in India today.
+步骤4.1、4.2和4.3：如果交易被批准，发行银行将资金冻结。批准或拒绝信息被发送回给收单方以及POS终端。
 
-UPI = payment markup language + standard for interoperable payments
+- 捕获和结算流程
 
+步骤1和2：商家想要在当天结束时收款，因此他们在POS终端点击“捕获”。交易以批处理的方式发送给收单方。收单方将包含交易的批处理文件发送给卡网络。
+
+步骤3：卡网络对从不同收单方收集的交易进行清算，并将清算文件发送给不同的发行银行。
+
+步骤4：发行银行确认清算文件的正确性，并将资金转移给相关的收单银行。
+
+步骤5：收单银行然后将资金转移给商家的银行。
+
+步骤4：卡网络从不同收单银行清算交易。清算是指相互抵消交易的过程，从而减少总交易数量。
+
+在这个过程中，卡网络承担了与每家银行对话的负担，并因此收取服务费。
+
+### 世界支付系统系列（第一部分）：印度的统一支付接口（UPI）
+
+什么是UPI？UPI是由印度国家支付公司开发的即时实时支付系统。
+
+它目前占印度数字零售交易的60%。
+
+UPI = 支付标记语言 + 支付互操作标准
 
 <p>
   <img src="images/how-does-upi-work.png"  style="width: 600px" />
 </p>
 
-
 ## DevOps
 
-###  DevOps vs. SRE vs. Platform Engineering. What is the difference?
+### DevOps与SRE与平台工程有什么区别？
 
-The concepts of DevOps, SRE, and Platform Engineering have emerged at different times and have been developed by various individuals and organizations. 
+DevOps、SRE和平台工程的概念在不同时间由不同的人和组织提出和发展。
 
 <p>
   <img src="images/devops-sre-platform.jpg" />
 </p>
 
-DevOps as a concept was introduced in 2009 by Patrick Debois and Andrew Shafer at the Agile conference. They sought to bridge the gap between software development and operations by promoting a collaborative culture and shared responsibility for the entire software development lifecycle. 
+DevOps的概念在2009年由Patrick Debois和Andrew Shafer在敏捷大会上提出。他们试图通过促进协作文化和对整个软件开发生命周期的共同责任来弥合软件开发和运维之间的差距。
 
-SRE, or Site Reliability Engineering, was pioneered by Google in the early 2000s to address operational challenges in managing large-scale, complex systems. Google developed SRE practices and tools, such as the Borg cluster management system and the Monarch monitoring system, to improve the reliability and efficiency of their services. 
+SRE，或站点可靠性工程，是由Google在2000年代早期开创的，以应对管理大规模、复杂系统的运营挑战。Google开发了SRE实践和工具，如Borg集群管理系统和Monarch监控系统，以提高服务的可靠性和效率。
 
-Platform Engineering is a more recent concept, building on the foundation of SRE engineering. The precise origins of Platform Engineering are less clear, but it is generally understood to be an extension of the DevOps and SRE practices, with a focus on delivering a comprehensive platform for product development that supports the entire business perspective. 
+平台工程是一个较新的概念，在SRE工程的基础上发展而来。平台工程的确切起源不太明确，但通常被理解为是DevOps和SRE实践的扩展，重点在于为产品开发提供支持整个业务视角的综合平台。
 
-It's worth noting that while these concepts emerged at different times. They are all related to the broader trend of improving collaboration, automation, and efficiency in software development and operations. 
+值得注意的是，虽然这些概念是在不同时间出现的，但它们都与改善软件开发和运维中的协作、自动化和效率的更广泛趋势有关。
 
-### What is k8s (Kubernetes)?
+### 什么是k8s（Kubernetes）？
 
-K8s is a container orchestration system. It is used for container deployment and management. Its design is greatly impacted by Google’s internal system Borg.
+K8s是一个容器编排系统。它用于容器部署和管理。其设计深受Google内部系统Borg的影响。
 
 <p>
   <img src="images/k8s.jpeg" style="width: 680px" />
 </p>
 
-A k8s cluster consists of a set of worker machines, called nodes, that run containerized applications. Every cluster has at least one worker node.
+一个k8s集群由一组工作机器组成，称为节点，运行容器化应用程序。每个集群至少有一个工作节点。
 
-The worker node(s) host the Pods that are the components of the application workload. The control plane manages the worker nodes and the Pods in the cluster. In production environments, the control plane usually runs across multiple computers, and a cluster usually runs multiple nodes, providing fault tolerance and high availability.
+工作节点（们）托管Pods，Pods是应用程序工作负载的组件。控制平面管理集群中的工作节点和Pods。在生产环境中，控制平面通常跨多台计算机运行，一个集群通常运行多个节点，提供容错和高可用性。
 
-- Control Plane Components
+- 控制平面组件
 
-1. API Server
+1. **API服务器**
 
-    The API server talks to all the components in the k8s cluster. All the operations on pods are executed by talking to the API server.
+    API服务器与k8s集群中的所有组件对话。所有对Pods的操作都是通过API服务器执行的。
 
-2. Scheduler
+2. **调度器**
 
-    The scheduler watches pod workloads and assigns loads on newly created pods.
+    调度器监控Pod工作负载并分配新创建的Pods的负载。
 
-3. Controller Manager
+3. **控制器管理器**
 
-    The controller manager runs the controllers, including Node Controller, Job Controller, EndpointSlice Controller, and ServiceAccount Controller.
+    控制器管理器运行控制器，包括节点控制器、作业控制器、端点切片控制器和服务账户控制器。
 
-4. Etcd
+4. **Etcd**
     
-    etcd is a key-value store used as Kubernetes' backing store for all cluster data.
+    etcd是一个键值存储，作为Kubernetes的所有集群数据的后端存储。
 
-- Nodes
+- 节点
 
-1. Pods
+1. **Pods**
 
-    A pod is a group of containers and is the smallest unit that k8s administers. Pods have a single IP address applied to every container within the pod.
+    Pod是一组容器，是k8s管理的最小单位。Pods具有应用于Pod内所有容器的单一IP地址。
 
-2. Kubelet
+2. **Kubelet**
 
-    An agent that runs on each node in the cluster. It ensures containers are running in a Pod.
+    在集群中的每个节点上运行的代理。它确保Pod中的容器正在运行。
 
-3. Kube Proxy
+3. **Kube Proxy**
 
-    Kube-proxy is a network proxy that runs on each node in your cluster. It routes traffic coming into a node from the service. It forwards requests for work to the correct containers.
+    Kube-proxy是运行在每个节点上的网络代理。它负责将进入节点的流量路由到服务。它将工作请求转发到正确的容器。
+
+
+question = r"""
+翻译以下文本,切记保持原本的md格式不变
 
 ### Docker vs. Kubernetes. Which one should we use? 
 
@@ -1081,374 +1081,378 @@ The worker node(s) host the Pods that are the components of the application work
 </p>
 
 
-What is Docker ? 
 
-Docker is an open-source platform that allows you to package, distribute, and run applications in isolated containers. It focuses on containerization, providing lightweight environments that encapsulate applications and their dependencies. 
+### Docker vs. Kubernetes。我们应该使用哪一个？
 
-What is Kubernetes ? 
+<p>
+  <img src="images/docker-vs-k8s.jpg" style="width: 680px" />
+</p>
 
-Kubernetes, often referred to as K8s, is an open-source container orchestration platform. It provides a framework for automating the deployment, scaling, and management of containerized applications across a cluster of nodes. 
+什么是Docker？
 
-How are both different from each other ? 
+Docker是一个开源平台，允许你打包、分发并在隔离的容器中运行应用程序。它专注于容器化，提供轻量级的环境，封装应用程序及其依赖项。
 
-Docker: Docker operates at the individual container level on a single operating system host. 
+什么是Kubernetes？
 
-You must manually manage each host and setting up networks, security policies, and storage for multiple related containers can be complex. 
+Kubernetes，通常简称为K8s，是一个开源的容器编排平台。它为自动化部署、扩展和管理跨节点集群的容器化应用程序提供了一个框架。
 
-Kubernetes: Kubernetes operates at the cluster level. It manages multiple containerized applications across multiple hosts, providing automation for tasks like load balancing, scaling, and ensuring the desired state of applications. 
+两者有何不同？
 
-In short, Docker focuses on containerization and running containers on individual hosts, while Kubernetes specializes in managing and orchestrating containers at scale across a cluster of hosts. 
+Docker：Docker在单一操作系统主机上操作单个容器级别。
 
-### How does Docker work? 
+你必须手动管理每个主机，并且为多个相关的容器设置网络、安全策略和存储可能会很复杂。
 
-The diagram below shows the architecture of Docker and how it works when we run “docker build”, “docker pull” 
-and “docker run”. 
+Kubernetes：Kubernetes在集群级别操作。它管理跨多个主机的多个容器化应用程序，提供自动化任务，如负载平衡、扩展，并确保应用程序的所需状态。
+
+简而言之，Docker专注于容器化和在单个主机上运行容器，而Kubernetes则专门用于管理和在跨主机集群中按比例编排容器。
+
+### Docker是如何工作的？
+
+下图展示了Docker的架构以及我们运行“docker build”、“docker pull”和“docker run”时它的工作原理。
 
 <p>
   <img src="images/docker.jpg" style="width: 680px" />
 </p>
 
-There are 3 components in Docker architecture: 
+Docker架构中有3个组件：
 
-- Docker client 
-    
-    The docker client talks to the Docker daemon. 
+- **Docker客户端**
+  
+    Docker客户端与Docker守护进程通信。
 
-- Docker host 
+- **Docker主机**
 
-    The Docker daemon listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. 
+    Docker守护进程监听Docker API请求并管理Docker对象，如镜像、容器、网络和卷。
 
-- Docker registry 
+- **Docker注册表**
 
-    A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use. 
+    Docker注册表存储Docker镜像。Docker Hub是一个任何人都可以使用的公共注册表。
 
-Let’s take the “docker run” command as an example. 
+以“docker run”命令为例：
 
-  1. Docker pulls the image from the registry. 
-  1. Docker creates a new container. 
-  1. Docker allocates a read-write filesystem to the container. 
-  1. Docker creates a network interface to connect the container to the default network. 
-  1. Docker starts the container.
+  1. Docker从注册表中拉取镜像。
+  2. Docker创建一个新的容器。
+  3. Docker为容器分配一个读写文件系统。
+  4. Docker创建一个网络接口以连接容器到默认网络。
+  5. Docker启动容器。
 
 ## GIT
 
-### How Git Commands work
+### Git命令是如何工作的
 
-To begin with, it's essential to identify where our code is stored. The common assumption is that there are only two locations - one on a remote server like Github and the other on our local machine. However, this isn't entirely accurate. Git maintains three local storages on our machine, which means that our code can be found in four places: 
+首先，我们需要确定代码存储在哪里。通常的假设是只有两个位置 - 一个在远程服务器如Github，另一个在本地机器上。然而，这并不完全准确。Git在我们的机器上维护了三个本地存储位置，这意味着我们的代码可以在四个地方找到：
 
 <p>
   <img src="images/git-commands.png" style="width: 600px" />
 </p>
 
+- **工作目录**：我们在这里编辑文件。
+- **暂存区**：文件暂时存放的地方，等待下一次提交。
+- **本地仓库**：包含已提交的代码。
+- **远程仓库**：存储代码的远程服务器。
 
-- Working directory: where we edit files 
-- Staging area: a temporary location where files are kept for the next commit 
-- Local repository: contains the code that has been committed 
-- Remote repository: the remote server that stores the code 
+大多数Git命令主要是在这四个位置之间移动文件。
 
-Most Git commands primarily move files between these four locations. 
+### Git是如何工作的？
 
-### How does Git Work?
-
-The diagram below shows the Git workflow. 
+下图展示了Git的工作流程。
 
 <p>
   <img src="images/git-workflow.jpeg" style="width: 520px" />
 </p>
 
+Git是一个分布式版本控制系统。
 
-Git is a distributed version control system. 
+每个开发者都维护主仓库的一个本地副本，并对本地副本进行编辑和提交。
 
-Every developer maintains a local copy of the main repository and edits and commits to the local copy. 
+提交速度很快，因为操作不涉及远程仓库。
 
-The commit is very fast because the operation doesn’t interact with the remote repository. 
-
-If the remote repository crashes, the files can be recovered from the local repositories. 
+如果远程仓库崩溃，可以从本地仓库恢复文件。
 
 ### Git merge vs. Git rebase
 
-What are the differences?
+有什么区别？
 
 <p>
   <img src="images/git-merge-git-rebase.jpeg" style="width: 680px" />
 </p>
 
-
-When we **merge changes** from one Git branch to another, we can use ‘git merge’ or ‘git rebase’. The diagram below shows how the two commands work.
+当我们**合并更改**从一个Git分支到另一个时，我们可以使用‘git merge’或‘git rebase’。下图展示了这两个命令的工作方式。
 
 **Git merge**
 
-This creates a new commit G’ in the main branch. G’ ties the histories of both main and feature branches.
+这会在主分支上创建一个新的提交G'。G'将主分支和功能分支的历史联系起来。
 
-Git merge is **non-destructive**. Neither the main nor the feature branch is changed.
+Git merge是**非破坏性的**。既不改变主分支也不改变功能分支。
 
 **Git rebase**
 
-Git rebase moves the feature branch histories to the head of the main branch. It creates new commits E’, F’, and G’ for each commit in the feature branch.
+Git rebase将功能分支的历史移动到主分支的头部。它为功能分支中的每个提交创建新的提交E'、F'和G'。
 
-The benefit of rebase is that it has a linear **commit history**.
+Rebase的优点是它具有线性的**提交历史**。
 
-Rebase can be dangerous if “the golden rule of git rebase” is not followed.
+如果不遵循Git rebase的“黄金法则”，rebase可能是危险的。
 
-**The Golden Rule of Git Rebase**
+**Git Rebase的黄金法则**
 
-Never use it on public branches!
+永远不要在公共分支上使用它！
 
-## Cloud Services
+## 云服务
 
-### A nice cheat sheet of different cloud services (2023 edition)
+### 不同云服务的简洁对比表（2023版）
 
 <p>
   <img src="images/cloud-compare.jpg" />
 </p>
 
+### 什么是云原生？
 
-### What is cloud native?
-
-Below is a diagram showing the evolution of architecture and processes since the 1980s. 
+以下是自1980年代以来架构和流程演变的示意图。
 
 <p>
   <img src="images/cloud-native.jpeg" style="width: 640px" />
 </p>
 
-Organizations can build and run scalable applications on public, private, and hybrid clouds using cloud native technologies. 
+组织可以使用云原生技术在公有云、私有云和混合云上构建和运行可扩展的应用程序。
 
-This means the applications are designed to leverage cloud features, so they are resilient to load and easy to scale. 
+这意味着应用程序被设计为利用云的特性，因此它们对负载具有弹性并且易于扩展。
 
-Cloud native includes 4 aspects: 
+云原生包括四个方面：
 
-1. Development process 
+1. **开发过程**
 
-    This has progressed from waterfall to agile to DevOps. 
+    这个过程已经从None瀑布模型发展到敏捷开发再到DevOps。
 
-2. Application Architecture 
+2. **应用架构**
 
-    The architecture has gone from monolithic to microservices. Each service is designed to be small, adaptive to the limited resources in cloud containers. 
+    架构已经从单体架构发展到微服务架构。每个服务被设计为小型的，适用于云容器中有限的资源。
 
-3. Deployment & packaging 
+3. **部署与打包**
 
-    The applications used to be deployed on physical servers. Then around 2000, the applications that were not sensitive to latency were usually deployed on virtual servers. With cloud native applications, they are packaged into docker images and deployed in containers. 
+    应用程序过去通常部署在物理服务器上。到了2000年左右，对延迟不敏感的应用程序通常部署在虚拟服务器上。随着云原生应用的出现，它们被打包成Docker镜像并在容器中部署。
 
-4. Application infrastructure 
+4. **应用基础设施**
 
-    The applications are massively deployed on cloud infrastructure instead of self-hosted servers. 
+    应用程序大量部署在云基础设施上，而不是自建服务器上。
 
-## Developer productivity tools
+## 开发者生产力工具
 
-### Visualize JSON files
+### 可视化JSON文件
 
-Nested JSON files are hard to read.
+嵌套的JSON文件很难阅读。
 
-**JsonCrack** generates graph diagrams from JSON files and makes them easy to read.
+**JsonCrack** 可以从JSON文件生成图形图表，使其易于阅读。
 
-Additionally, the generated diagrams can be downloaded as images.
+此外，生成的图表可以下载为图片。
 
 <p>
   <img src="images/json-cracker.jpeg" />
 </p>
 
 
-### Automatically turn code into architecture diagrams
+### 自动将代码转换为架构图
 
 <p>
   <img src="images/diagrams_as_code.jpeg" style="width: 640px" />
 </p>
 
 
-What does it do?
+它能做什么？
 
-- Draw the cloud system architecture in Python code.
-- Diagrams can also be rendered directly inside the Jupyter Notebooks.
-- No design tools are needed. 
-- Supports the following providers: AWS, Azure, GCP, Kubernetes, Alibaba Cloud, Oracle Cloud, etc. 
+- 在Python代码中绘制云系统架构。
+- 图表也可以直接在Jupyter Notebooks中渲染。
+- 不需要设计工具。
+- 支持以下提供商：AWS, Azure, GCP, Kubernetes, 阿里云, Oracle Cloud等。
  
 [Github repo](https://github.com/mingrammer/diagrams)
 
 ## Linux
 
-### Linux file system explained
+### Linux文件系统详解
 
 <p>
   <img src="images/linux-file-systems.jpg" style="width: 680px" />
 </p>
 
-The Linux file system used to resemble an unorganized town where individuals constructed their houses wherever they pleased. However, in 1994, the Filesystem Hierarchy Standard (FHS) was introduced to bring order to the Linux file system.
+Linux文件系统过去像是一个未组织的城镇，人们随意建造房屋。然而，在1994年，引入文件系统层次结构标准（FHS）来规范Linux文件系统的秩序。
 
-By implementing a standard like the FHS, software can ensure a consistent layout across various Linux distributions. Nonetheless, not all Linux distributions strictly adhere to this standard. They often incorporate their own unique elements or cater to specific requirements.
-To become proficient in this standard, you can begin by exploring. Utilize commands such as "cd" for navigation and "ls" for listing directory contents. Imagine the file system as a tree, starting from the root (/). With time, it will become second nature to you, transforming you into a skilled Linux administrator.
+通过实施像FHS这样的标准，软件可以确保在各种Linux发行版上保持一致的布局。然而，并非所有Linux发行版都严格遵守这一标准。它们常常加入自己的独特元素或满足特定需求。
+要精通这个标准，你可以从探索开始。使用“cd”命令来导航，“ls”命令来列出目录内容。把文件系统想象成一棵树，从根（/）开始。随着时间的推移，你将变得熟练，成为一名熟练的Linux管理员。
 
-### 18 Most-used Linux Commands You Should Know 
+### 18个最常用的Linux命令你应该知道
 
-Linux commands are instructions for interacting with the operating system. They help manage files, directories, system processes, and many other aspects of the system. You need to become familiar with these commands in order to navigate and maintain Linux-based systems efficiently and effectively. 
+Linux命令是与操作系统交互的指令。它们帮助管理文件、目录、系统进程以及系统的许多其他方面。你需要熟悉这些命令，以便高效而有效地导航和维护基于Linux的系统。
 
-This diagram below shows popular Linux commands: 
+下图展示了常用的Linux命令：
 
 <p>
   <img src="images/18 Most-Used Linux Commands You Should Know-01.jpeg" style="width: 680px" />
 </p>
 
 
-- ls - List files and directories 
-- cd - Change the current directory 
-- mkdir - Create a new directory 
-- rm - Remove files or directories 
-- cp - Copy files or directories 
-- mv - Move or rename files or directories 
-- chmod - Change file or directory permissions 
-- grep - Search for a pattern in files 
-- find - Search for files and directories 
-- tar - manipulate tarball archive files 
-- vi - Edit files using text editors 
-- cat - display the content of files 
-- top - Display processes and resource usage 
-- ps - Display processes information 
-- kill - Terminate a process by sending a signal 
-- du - Estimate file space usage 
-- ifconfig - Configure network interfaces  
-- ping - Test network connectivity between hosts 
+- ls - 列出文件和目录
+- cd - 更改当前目录
+- mkdir - 创建新目录
+- rm - 删除文件或目录
+- cp - 复制文件或目录
+- mv - 移动或重命名文件或目录
+- chmod - 更改文件或目录权限
+- grep - 在文件中搜索模式
+- find - 搜索文件和目录
+- tar - 操作tarball存档文件
+- vi - 使用文本编辑器编辑文件
+- cat - 显示文件内容
+- top - 显示进程和资源使用情况
+- ps - 显示进程信息
+- kill - 通过发送信号终止进程
+- du - 估计文件空间使用
+- ifconfig - 配置网络接口  
+- ping - 测试主机之间的网络连通性
 
-## Security
+## 安全性
 
-### How does HTTPS work?
+### HTTPS的工作原理是什么？
 
-Hypertext Transfer Protocol Secure (HTTPS) is an extension of the Hypertext Transfer Protocol (HTTP.) HTTPS transmits encrypted data using Transport Layer Security (TLS.) If the data is hijacked online, all the hijacker gets is binary code. 
+超文本传输协议安全（HTTPS）是超文本传输协议（HTTP）的扩展。HTTPS使用传输层安全性（TLS）传输加密数据。如果数据在线被劫持，劫持者只能得到二进制代码。
 
 <p>
   <img src="images/https.jpg" />
 </p>
 
 
-How is the data encrypted and decrypted?
+数据是如何加密和解密的？
 
-Step 1 - The client (browser) and the server establish a TCP connection.
+步骤1 - 客户端（浏览器）和服务器建立TCP连接。
 
-Step 2 - The client sends a “client hello” to the server. The message contains a set of necessary encryption algorithms (cipher suites) and the latest TLS version it can support. The server responds with a “server hello” so the browser knows whether it can support the algorithms and TLS version.
+步骤2 - 客户端向服务器发送“客户端问候”。消息中包含一组必要的加密算法（密码套件）和它可以支持的最新TLS版本。服务器以“服务器问候”响应，这样浏览器就知道是否可以支持这些算法和TLS版本。
 
-The server then sends the SSL certificate to the client. The certificate contains the public key, host name, expiry dates, etc. The client validates the certificate. 
+然后，服务器向客户端发送SSL证书。证书包含公钥、主机名、到期日期等。客户端验证证书。
 
-Step 3 - After validating the SSL certificate, the client generates a session key and encrypts it using the public key. The server receives the encrypted session key and decrypts it with the private key. 
+步骤3 - 验证SSL证书后，客户端生成一个会话密钥并使用公钥加密。服务器接收到加密的会话密钥并使用私钥解密。
 
-Step 4 - Now that both the client and the server hold the same session key (symmetric encryption), the encrypted data is transmitted in a secure bi-directional channel.
+步骤4 - 现在，客户端和服务器都持有相同的会话密钥（对称加密），加密数据通过一个安全的双向通道传输。
 
-Why does HTTPS switch to symmetric encryption during data transmission? There are two main reasons:
+为什么HTTPS在数据传输期间切换到对称加密？主要有两个原因：
 
-1. Security: The asymmetric encryption goes only one way. This means that if the server tries to send the encrypted data back to the client, anyone can decrypt the data using the public key.
+1. **安全性**：非对称加密只支持单向。这意味着如果服务器试图将加密数据发送回客户端，任何人都可以使用公钥解密数据。
 
-2. Server resources: The asymmetric encryption adds quite a lot of mathematical overhead. It is not suitable for data transmissions in long sessions.
+2. **服务器资源**：非对称加密增加了相当多的数学负担。它不适合长时间会话的数据传输。
 
-### Oauth 2.0 Explained With Simple Terms. 
+### 用简单词汇解释Oauth 2.0。
 
-OAuth 2.0 is a powerful and secure framework that allows different applications to securely interact with each other on behalf of users without sharing sensitive credentials. 
+OAuth 2.0是一个强大且安全的框架，它允许不同的应用程序代表用户安全地相互交互，而无需共享敏感的凭证。
 
 <p>
   <img src="images/oAuth2.jpg" />
 </p>
 
-The entities involved in OAuth are the User, the Server, and the Identity Provider (IDP). 
+OAuth涉及的实体包括用户、服务器和身份提供者（IDP）。
 
-What Can an OAuth Token Do? 
+**OAuth令牌能做什么？**
 
-When you use OAuth, you get an OAuth token that represents your identity and permissions. This token can do a few important things: 
+当你使用OAuth时，你会得到一个代表你的身份和权限的OAuth令牌。这个令牌可以做几件重要的事情：
 
-Single Sign-On (SSO): With an OAuth token, you can log into multiple services or apps using just one login, making life easier and safer. 
+- **单点登录（SSO）**：有了OAuth令牌，你可以使用一个登录凭证登录多个服务或应用，使生活更加便捷和安全。
+- **跨系统授权**：OAuth令牌允许你在不同系统之间共享你的授权或访问权限，因此你不必在每个地方单独登录。
+- **访问用户资料**：拥有OAuth令牌的应用可以访问你允许的用户资料的某些部分，但不会看到全部。
 
-Authorization Across Systems: The OAuth token allows you to share your authorization or access rights across various systems, so you don't have to log in separately everywhere. 
+请记住，OAuth 2.0的重点是保护你和你的数据安全，同时在不同应用和服务之间提供无缝且无障碍的在线体验。
 
-Accessing User Profile: Apps with an OAuth token can access certain parts of your user profile that you allow, but they won't see everything. 
-
-Remember, OAuth 2.0 is all about keeping you and your data safe while making your online experiences seamless and hassle-free across different applications and services.
-
-### Top 4 Forms of Authentication Mechanisms 
+### 四种主要的身份验证机制
 
 <p>
   <img src="images/top4-most-used-auth.jpg" />
 </p>
 
-1. SSH Keys: 
-   
-    Cryptographic keys are used to access remote systems and servers securely 
+1. **SSH密钥**：
 
-1. OAuth Tokens: 
+    使用加密密钥来安全访问远程系统和服务器
 
-    Tokens that provide limited access to user data on third-party applications 
+1. **OAuth令牌**：
 
-1. SSL Certificates: 
-  
-    Digital certificates ensure secure and encrypted communication between servers and clients 
+    提供对第三方应用中的用户数据的有限访问权限的令牌
 
-1. Credentials: 
+1. **SSL证书**：
 
-    User authentication information is used to verify and grant access to various systems and services
+    数字证书确保服务器与客户端之间的安全和加密通信
 
-### Session, cookie, JWT, token, SSO, and OAuth 2.0 - what are they?
+1. **凭证**：
 
-These terms are all related to user identity management. When you log into a website, you declare who you are (identification). Your identity is verified (authentication), and you are granted the necessary permissions (authorization). Many solutions have been proposed in the past, and the list keeps growing.
+    用户身份验证信息用于验证和授权访问各种系统和服务
+
+### Session, cookie, JWT, token, SSO和OAuth 2.0 - 它们是什么？
+
+这些术语都与用户身份管理有关。当你登录网站时，你声明了你的身份（识别）。你的身份被验证（认证），然后你被授予必要的权限（授权）。过去提出了许多解决方案，并且列表还在不断增加。
 
 <p>
   <img src="images/session.jpeg" />
 </p>
 
-From simple to complex, here is my understanding of user identity management:
+从简单到复杂，这里是我对用户身份管理的理解：
 
-- WWW-Authenticate is the most basic method. You are asked for the username and password by the browser. As a result of the inability to control the login life cycle, it is seldom used today.
+- **WWW-Authenticate** 是最基本的方法。你被浏览器要求输入用户名和密码。由于无法控制登录生命周期，这种方法今天很少使用。
 
-- A finer control over the login life cycle is session-cookie. The server maintains session storage, and the browser keeps the ID of the session. A cookie usually only works with browsers and is not mobile app friendly.
+- **会话- cookie** 提供了对登录生命周期的更精细控制。服务器维护会话存储，而浏览器保存会话ID。Cookie通常只适用于浏览器，不适合移动应用。
 
-- To address the compatibility issue, the token can be used. The client sends the token to the server, and the server validates the token. The downside is that the token needs to be encrypted and decrypted, which may be time-consuming.
+- 为了解决兼容性问题，可以使用**令牌**。客户端将令牌发送到服务器，服务器验证令牌。其缺点是需要加密和解密令牌，这可能耗时。
 
-- JWT is a standard way of representing tokens. This information can be verified and trusted because it is digitally signed. Since JWT contains the signature, there is no need to save session information on the server side.
+- **JWT** 是表示令牌的标准方式。因为它是数字签名的，所以可以验证并信任其中的信息。由于JWT包含签名，服务器端不需要保存会话信息。
 
-- By using SSO (single sign-on), you can sign on only once and log in to multiple websites. It uses CAS (central authentication service) to maintain cross-site information.
+- 通过**单点登录（SSO）**，你可以只登录一次并访问多个网站。它使用CAS（中央认证服务）来维护跨站点信息。
 
-- By using OAuth 2.0, you can authorize one website to access your information on another website.
+- 通过**OAuth 2.0**，你可以授权一个网站访问你在另一个网站上的信息。
 
-### How to store passwords safely in the database and how to validate a password? 
+### 如何在数据库中安全存储密码以及如何验证密码？
 
 <p>
   <img src="images/salt.jpg" style="width: 720px" />
 </p>
 
- 
-**Things NOT to do**
+**不要做的事情**
 
-- Storing passwords in plain text is not a good idea because anyone with internal access can see them.
+- 以明文存储密码是个坏主意，因为任何内部人员都可以看到它们。
 
-- Storing password hashes directly is not sufficient because it is pruned to precomputation attacks, such as rainbow tables. 
+- 直接存储密码的哈希值是不够的，因为它容易受到预计算攻击，如彩虹表。
 
-- To mitigate precomputation attacks, we salt the passwords. 
+- 为了减轻预计算攻击，我们给密码加盐。
 
-**What is salt?**
+**什么是盐？**
 
-According to OWASP guidelines, “a salt is a unique, randomly generated string that is added to each password as part of the hashing process”.
- 
-**How to store a password and salt?**
+根据OWASP指南，“盐”是添加到每个密码中作为哈希过程一部分的唯一随机生成的字符串。
 
-1. the hash result is unique to each password.
-1. The password can be stored in the database using the following format: hash(password + salt).
+**如何存储密码和盐？**
 
-**How to validate a password?**
+1. 哈希结果对每个密码都是唯一的。
+1. 密码可以使用以下格式存储在数据库中：`hash(password + salt)`。
 
-To validate a password, it can go through the following process:
+**如何验证密码？**
 
-1. A client enters the password.
-1. The system fetches the corresponding salt from the database.
-1. The system appends the salt to the password and hashes it. Let’s call the hashed value H1.
-1. The system compares H1 and H2, where H2 is the hash stored in the database. If they are the same, the password is valid. 
+验证密码可以通过以下过程：
 
-### Explaining JSON Web Token (JWT) to a 10 year old Kid
+1. 客户端输入密码。
+1. 系统从数据库中获取对应的盐。
+1. 系统将盐附加到密码上并进行哈希。让我们称这个哈希值为H1。
+1. 系统比较H1和H2，其中H2是数据库中存储的哈希值。如果它们相同，则密码有效。
+
+### 对10岁孩子解释JSON Web Token（JWT）
 
 <p>
   <img src="images/jwt.jpg" />
 </p>
 
-Imagine you have a special box called a JWT. Inside this box, there are three parts: a header, a payload, and a signature.
+想象你有一个特别的盒子叫做JWT。里面有三部分：一个头部、一个有效载荷和一个签名。
 
-The header is like the label on the outside of the box. It tells us what type of box it is and how it's secured. It's usually written in a format called JSON, which is just a way to organize information using curly braces { } and colons : .
+头部就像盒子外面的标签。它告诉我们这是什么类型的盒子，以及它如何被保护。通常它是以JSON格式写的，这是一种用花括号{ }和冒号:来组织信息的方式。
 
-The payload is like the actual message or information you want to send. It could be your name, age, or any other data you want to share. It's also written in JSON format, so it's easy to understand and work with.
-Now, the signature is what makes the JWT secure. It's like a special seal that only the sender knows how to create. The signature is created using a secret code, kind of like a password. This signature ensures that nobody can tamper with the contents of the JWT without the sender knowing about it.
+有效载荷就像你想要发送的实际信息或数据。它可以是你的名字、年龄或你想分享的任何其他数据。同样，它也是用JSON格式写的，所以很容易理解和处理。
 
-When you want to send the JWT to a server, you put the header, payload, and signature inside the box. Then you send it over to the server. The server can easily read the header and payload to understand who you are and what you want to do.
+签名是让JWT安全的部分。它就像一个特殊的封印，只有发送者知道如何创建。签名是使用一个秘密代码（有点像密码）来生成的。这种签名确保了没有人可以在不被发送者知道的情况下None篡改JWT的内容。
+
+当你想要将JWT发送到服务器时，你将头部、有效载荷和签名放入盒子中，然后发送给服务器。服务器可以轻松地读取头部和有效载荷来理解你是谁以及你想做什么。
+
+
+question = r"""
+翻译以下文本,切记保持原本的md格式不变
 
 ### How does Google Authenticator (or other types of 2-factor authenticators) work?
 
@@ -1457,141 +1461,147 @@ Google Authenticator is commonly used for logging into our accounts when 2-facto
 Google Authenticator is a software-based authenticator that implements a two-step verification service. The diagram below provides detail. 
 
 <p>
+
+### Google Authenticator（或其他类型的两因素身份验证器）是如何工作的？
+
+Google Authenticator 通常在启用两因素身份验证时用于登录我们的账户。它是如何保证安全的？
+
+Google Authenticator 是一个基于软件的身份验证器，它实现了两步验证服务。下面的图表提供了详细信息。
+
+<p>
   <img src="images/google_authenticate.jpeg" />
 </p>
 
+涉及两个阶段：
 
-There are two stages involved:
+- **第一阶段** - 用户启用 Google 两步验证。
+- **第二阶段** - 用户使用身份验证器进行登录等操作。
 
-- Stage 1 - The user enables Google two-step verification. 
-- Stage 2 - The user uses the authenticator for logging in, etc.
+让我们看看这些阶段。
 
-Let’s look at these stages.
- 
-**Stage 1**
+**第一阶段**
 
-Steps 1 and 2: Bob opens the web page to enable two-step verification. The front end requests a secret key. The authentication service generates the secret key for Bob and stores it in the database.
- 
-Step 3: The authentication service returns a URI to the front end. The URI is composed of a key issuer, username, and secret key. The URI is displayed in the form of a QR code on the web page.
- 
-Step 4: Bob then uses Google Authenticator to scan the generated QR code. The secret key is stored in the authenticator.
+步骤 1 和 2：Bob 打开网页以启用两步验证。前端请求一个密钥。身份验证服务为 Bob 生成密钥并将其存储在数据库中。
 
-**Stage 2**
-Steps 1 and 2: Bob wants to log into a website with Google two-step verification. For this, he needs the password. Every 30 seconds, Google Authenticator generates a 6-digit password using TOTP (Time-based One Time Password) algorithm. Bob uses the password to enter the website.
- 
-Steps 3 and 4: The frontend sends the password Bob enters to the backend for authentication. The authentication service reads the secret key from the database and generates a 6-digit password using the same TOTP algorithm as the client.
- 
-Step 5: The authentication service compares the two passwords generated by the client and the server, and returns the comparison result to the frontend. Bob can proceed with the login process only if the two passwords match.
- 
-Is this authentication mechanism safe? 
+步骤 3：身份验证服务返回一个 URI 给前端。URI 由密钥发布者、用户名和密钥组成。URI 在网页上以二维码的形式显示。
 
-- Can the secret key be obtained by others? 
+步骤 4：Bob 然后使用 Google Authenticator 扫描生成的二维码。密钥被存储在身份验证器中。
 
-    We need to make sure the secret key is transmitted using HTTPS. The authenticator client and the database store the secret key, and we need to make sure the secret keys are encrypted.
+**第二阶段**
+步骤 1 和 2：Bob 想登录一个启用 Google 两步验证的网站。为此，他需要密码。Google Authenticator 每 30 秒使用 TOTP（基于时间的一次性密码）算法生成一个 6 位密码。Bob 使用这个密码进入网站。
 
-- Can the 6-digit password be guessed by hackers?
+步骤 3 和 4：前端将 Bob 输入的密码发送到后端进行身份验证。身份验证服务从数据库中读取密钥，并使用与客户端相同的 TOTP 算法生成一个 6 位密码。
+
+步骤 5：身份验证服务比较客户端和服务器生成的两个密码，并将比较结果返回给前端。只有当两个密码匹配时，Bob 才能继续登录过程。
+
+这种身份验证机制安全吗？
+
+- **其他人能否获取密钥？**
+
+    我们需要确保密钥是通过 HTTPS 传输的。身份验证客户端和数据库存储密钥，我们需要确保这些密钥是加密的。
+
+- **黑客能否猜到 6 位密码？**
     
-    No. The password has 6 digits, so the generated password has 1 million potential combinations. Plus, the password changes every 30 seconds. If hackers want to guess the password in 30 seconds, they need to enter 30,000 combinations per second.
+    不能。密码有 6 位，所以生成的密码有 100 万种可能的组合。加上密码每 30 秒变化一次。如果黑客想在 30 秒内猜出密码，他们需要每秒输入 30,000 种组合。
 
+## 现实世界的案例研究
 
-##  Real World Case Studies
+### Netflix 的技术栈
 
-### Netflix's Tech Stack
-
-This post is based on research from many Netflix engineering blogs and open-source projects. If you come across any inaccuracies, please feel free to inform us.
+这篇文章基于许多 Netflix 工程博客和开源项目的研究。如果您发现任何不准确的地方，请随时告知我们。
 
 <p>
   <img src="images/netflix tech stack.png" style="width: 680px" />
 </p>
 
-**Mobile and web**: Netflix has adopted Swift and Kotlin to build native mobile apps. For its web application, it uses React.
+**移动和网页**：Netflix 采用 Swift 和 Kotlin 构建原生移动应用。对于其网络应用程序，它使用 React。
 
-**Frontend/server communication**: Netflix uses GraphQL.
+**前端/服务器通信**：Netflix 使用 GraphQL。
 
-**Backend services**: Netflix relies on ZUUL, Eureka, the Spring Boot framework, and other technologies.
+**后端服务**：Netflix 依赖 ZUUL、Eureka、Spring Boot 框架等技术。
 
-**Databases**: Netflix utilizes EV cache, Cassandra, CockroachDB, and other databases.
+**数据库**：Netflix 使用 EV 缓存、Cassandra、CockroachDB 等数据库。
 
-**Messaging/streaming**: Netflix employs Apache Kafka and Fink for messaging and streaming purposes.
+**消息/流**：Netflix 采用 Apache Kafka 和 Fink 进行消息和流处理。
 
-**Video storage**: Netflix uses S3 and Open Connect for video storage.
+**视频存储**：Netflix 使用 S3 和 Open Connect 进行视频存储。
 
-**Data processing**: Netflix utilizes Flink and Spark for data processing, which is then visualized using Tableau. Redshift is used for processing structured data warehouse information.
+**数据处理**：Netflix 利用 Flink 和 Spark 进行数据处理，然后使用 Tableau 进行可视化。Redshift 用于处理结构化数据仓库信息。
 
-**CI/CD**: Netflix employs various tools such as JIRA, Confluence, PagerDuty, Jenkins, Gradle, Chaos Monkey, Spinnaker, Atlas, and more for CI/CD processes.
+**CI/CD**：Netflix 采用 JIRA、Confluence、PagerDuty、Jenkins、Gradle、Chaos Monkey、Spinnaker、Atlas 等多种工具进行 CI/CD 流程。
 
-### Twitter Architecture 2022
+### Twitter 架构 2022
 
-Yes, this is the real Twitter architecture. It is posted by Elon Musk and redrawn by us for better readability. 
+是的，这是真实的 Twitter 架构。它由 Elon Musk 发布，我们重新绘制以便于阅读。
 
 <p>
   <img src="images/twitter-arch.jpeg" />
 </p>
 
+### Airbnb 微服务架构在过去 15 年的演变
 
-### Evolution of Airbnb’s microservice architecture over the past 15 years
-
-Airbnb’s microservice architecture went through 3 main stages. 
+Airbnb 的微服务架构经历了 3 个主要阶段。
 
 <p>
   <img src="images/airbnb_arch.jpeg" />
 </p>
 
+**单体架构（2008 - 2017）**
 
-Monolith (2008 - 2017)
+Airbnb 最初是一个简单的房东和客人市场。这是在 Ruby on Rails 应用程序中构建的 - 单体。
 
-Airbnb began as a simple marketplace for hosts and guests. This is built in a Ruby on Rails application - the monolith. 
+挑战是什么？
 
-What’s the challenge?
+- 团队所有权混乱 + 无人维护的代码
+- 部署缓慢
 
-- Confusing team ownership + unowned code
-- Slow deployment 
+**微服务（2017 - 2020）**
 
-Microservices (2017 - 2020)
+微服务旨在解决这些挑战。在微服务架构中，关键服务包括：
 
-Microservice aims to solve those challenges. In the microservice architecture, key services include:
+- 数据获取服务
+- 业务逻辑数据服务
+- 写入工作流服务
+- UI 聚合服务
+- 每个服务有一个拥有团队
 
-- Data fetching service
-- Business logic data service
-- Write workflow service
-- UI aggregation service
-- Each service had one owning team
+挑战是什么？
 
-What’s the challenge?
+数百个服务和依赖关系对人来说难以管理。
 
-Hundreds of services and dependencies were difficult for humans to manage.
+**微 + 宏服务（2020 - 至今）**
 
-Micro + macroservices (2020 - present)
+这是 Airbnb 当前正在努力的方向。微服务和宏服务混合模型专注于 API 的统一。
 
-This is what Airbnb is working on now. The micro and macroservice hybrid model focuses on the unification of APIs.
+### Monorepo 与 Microrepo
 
-### Monorepo vs. Microrepo. 
-
-Which is the best? Why do different companies choose different options? 
+哪个最好？为什么不同的公司选择不同的选项？
 
 <p>
   <img src="images/monorepo-microrepo.jpg" />
 </p>
 
+Monorepo 并不新鲜；Linux 和 Windows 都是使用 Monorepo 创建的。为了提高可扩展性和构建速度，Google 开发了自己的内部专用工具链来更快地扩展它，并制定了严格的编码质量标准来保持其一致性。
 
-Monorepo isn't new; Linux and Windows were both created using Monorepo. To improve scalability and build speed, Google developed its internal dedicated toolchain to scale it faster and strict coding quality standards to keep it consistent. 
+亚马逊和 Netflix 是微服务哲学的主要推广者。这种方法自然将服务代码分成不同的仓库。它扩展得更快，但后来可能会导致治理上的痛点。
 
-Amazon and Netflix are major ambassadors of the Microservice philosophy. This approach naturally separates the service code into separate repositories. It scales faster but can lead to governance pain points later on. 
+在 Monorepo 中，每个服务都是一个文件夹，每个文件夹都有 BUILD 配置和 OWNERS 权限控制。每个服务成员负责自己的文件夹。
 
-Within Monorepo, each service is a folder, and every folder has a BUILD config and OWNERS permission control. Every service member is responsible for their own folder. 
+另一方面，在 Microrepo 中，每个服务负责自己的仓库，构建配置和权限通常针对整个仓库设置。
 
-On the other hand, in Microrepo, each service is responsible for its repository, with the build config and permissions typically set for the entire repository. 
+在 Monorepo 中，依赖项在整个代码库中共享，无论您的业务如何，所以当有版本升级时，每个代码库都升级它们的版本。
 
-In Monorepo, dependencies are shared across the entire codebase regardless of your business, so when there's a version upgrade, every codebase upgrades their version. 
+在 Microrepo 中，依赖项在每个仓库内控制。企业根据自己的日程表选择何时升级版本。
 
-In Microrepo, dependencies are controlled within each repository. Businesses choose when to upgrade their versions based on their own schedules. 
+Monorepo 有一套标准的检查流程。Google 的代码审查过程以设置高标准而闻名，确保 Monorepo 的质量标准一致，无论业务如何。
 
-Monorepo has a standard for check-ins. Google's code review process is famously known for setting a high bar, ensuring a coherent quality standard for Monorepo, regardless of the business. 
+Microrepo 可以设置自己的标准或采用共享标准，通过引入最佳实践。它可以为业务更快地扩展，但代码质量可能会有所不同。Google 工程师构建了 Bazel，Meta 构建了 Buck。还有其他开源工具可用，包括 Nx、Lerna 等。
 
-Microrepo can either set its own standard or adopt a shared standard by incorporating the best practices. It can scale faster for business, but the code quality might be a bit different. 
-Google engineers built Bazel, and Meta built Buck. There are other open-source tools available, including Nx, Lerna, and others. 
+多年来，Microrepo 支持的工具更多，包括 Java 的 Maven 和 Gradle，NodeJS 的 NPM，以及 C/C++ 的 CMake 等。
 
-Over the years, Microrepo has had more supported tools, including Maven and Gradle for Java, NPM for NodeJS, and CMake for C/C++, among others. 
+
+question = r"""
+翻译以下文本,切记保持原本的md格式不变
 
 ### How will you design the Stack Overflow website? 
 
@@ -1601,139 +1611,142 @@ If your answer is on-premise servers and monolith (on the bottom of the followin
   <img src="images/stackoverflow.jpg" />
 </p>
 
+### 你将如何设计Stack Overflow网站？
 
-**What people think it should look like**
+如果你回答的是使用本地服务器和单体架构（如图底部所示），你很可能会在面试中失败，但这确实是Stack Overflow的实际架构！
 
-The interviewer is probably expecting something like the top portion of the picture.
+<p>
+  <img src="images/stackoverflow.jpg" />
+</p>
 
-- Microservice is used to decompose the system into small components.
-- Each service has its own database. Use cache heavily.
-- The service is sharded.
-- The services talk to each other asynchronously through message queues.
-- The service is implemented using Event Sourcing with CQRS.
-- Showing off knowledge in distributed systems such as eventual consistency, CAP theorem, etc.
+**人们认为它应该是什么样**
 
-**What it actually is**
+面试官可能会期望看到像图片顶部那样的架构。
 
-Stack Overflow serves all the traffic with only 9 on-premise web servers, and it’s on monolith! It has its own servers and does not run on the cloud.
+- 使用微服务将系统分解为小组件。
+- 每个服务都有自己的数据库。重度使用缓存。
+- 服务是分片的。
+- 服务通过消息队列异步通信。
+- 服务采用事件None溯源和CQRS模式实现。
+- 展示分布式系统知识，如最终一致性、CAP定理等。
 
-This is contrary to all our popular beliefs these days. 
+**实际情况**
 
-### Why did Amazon Prime Video monitoring move from serverless to monolithic? How can it save 90% cost?
+Stack Overflow仅使用9台本地服务器就处理了所有流量，而且它是单体架构！它有自己的服务器，并不运行在云端。
 
-The diagram below shows the architecture comparison before and after the migration. 
+这与我们今天的流行观点相None悖。
+
+### 为什么亚马逊Prime Video的监控系统从无服务器架构转向单体架构？如何节省90%的成本？
+
+下图展示了迁移前后的架构对比。
 
 <p>
   <img src="images/serverless-to-monolithic.jpeg" />
 </p>
 
+什么是亚马逊Prime Video监控服务？
 
-What is Amazon Prime Video Monitoring Service? 
+Prime Video服务需要监控数千个直播流的质量。监控工具实时自动分析流并识别质量问题，如块损坏、视频冻结、同步问题等。这对客户满意度至关重要。
 
-Prime Video service needs to monitor the quality of thousands of live streams. The monitoring tool automatically analyzes the streams in real time and identifies quality issues like block corruption, video freeze, and sync problems. This is an important process for customer satisfaction. 
+有三个步骤：媒体转换器、缺陷检测器和实时通知。
 
-There are 3 steps: media converter, defect detector, and real-time notification. 
+- 旧架构的问题是什么？
 
-- What is the problem with the old architecture? 
+  旧架构基于Amazon Lambda，适合快速构建服务。但在大规模运行时并不划算。两个最昂贵的操作是：
 
-  The old architecture was based on Amazon Lambda, which was good for building services quickly. However, it was not cost-effective when running the architecture at a high scale. The two most expensive operations are: 
+1. 编排工作流 - AWS Step Functions按状态转换收费，每秒执行多次状态转换。
 
-1. The orchestration workflow - AWS step functions charge users by state transitions and the orchestration performs multiple state transitions every second. 
+2. 分布式组件之间的数据传输 - 中间数据存储在Amazon S3，以便下一阶段下载。当数据量很大时，下载成本很高。
 
-2. Data passing between distributed components - the intermediate data is stored in Amazon S3 so that the next stage can download. The download can be costly when the volume is high. 
+- 单体架构节省90%的成本
 
-- Monolithic architecture saves 90% cost 
+  单体架构旨在解决成本问题。仍然有三个组件，但媒体转换器和缺陷检测器部署在同一个进程中，节省了网络传输数据的成本。令人惊讶的是，这种部署架构的改变导致了90%的成本节省！
 
-  A monolithic architecture is designed to address the cost issues. There are still 3 components, but the media converter and defect detector are deployed in the same process, saving the cost of passing data over the network. Surprisingly, this approach to deployment architecture change led to 90% cost savings! 
+这是一个有趣且独特的案例研究，因为微服务在科技行业已成为一种时尚的选择。看到我们正在进行更多关于架构演进的讨论，并更诚实地讨论其优缺点是非常好的。将组件分解成分布式微服务是有成本的。
 
-This is an interesting and unique case study because microservices have become a go-to and fashionable choice in the tech industry. It's good to see that we are having more discussions about evolving the architecture and having more honest discussions about its pros and cons. Decomposing components into distributed microservices comes with a cost. 
+- 亚马逊领导层对此说了什么？
 
-- What did Amazon leaders say about this? 
-  
-  Amazon CTO Werner Vogels: “Building **evolvable software systems** is a strategy, not a religion. And revisiting your architecture with an open mind is a must.” 
+  亚马逊CTO Werner Vogels：“构建**可演进的软件系统**是一种策略，不是宗教。重新审视你的架构，保持开放的心态是必须的。”
 
-Ex Amazon VP Sustainability Adrian Cockcroft: “The Prime Video team had followed a path I call **Serverless First**…I don’t advocate **Serverless Only**”. 
+  前亚马逊可持续发展副总裁Adrian Cockcroft：“Prime Video团队遵循了我称为**无服务器优先**的路径……我不提None倡**仅无服务器**。”
 
-### How does Disney Hotstar capture 5 Billion Emojis during a tournament?
+### Disney Hotstar如何在比赛期间捕获50亿个表情符号？
 
 <p>
   <img src="images/hotstar_emojis.jpeg" style="width: 720px" />
 </p>
 
+1. 客户端通过标准HTTP请求发送表情符号。你可以把Golang服务看作一个典型的Web服务器。选择Golang是因为它支持并发性好，Golang的线程很轻量。
 
-1. Clients send emojis through standard HTTP requests. You can think of Golang Service as a typical Web Server. Golang is chosen because it supports concurrency well. Threads in Golang are lightweight.
+2. 由于写入量非常高，Kafka（消息队列）用作缓冲。
 
-2. Since the write volume is very high, Kafka (message queue) is used as a buffer.
+3. 表情符号数据由一个名为Spark的流处理服务聚合。每2秒聚合一次数据，这是可配置的。时间间隔的选择涉及到权衡。更短的时间间隔意味着表情符号更快地传递给其他客户端，但也意味着需要更多的计算资源。
 
-3. Emoji data are aggregated by a streaming processing service called Spark. It aggregates data every 2 seconds, which is configurable. There is a trade-off to be made based on the interval. A shorter interval means emojis are delivered to other clients faster but it also means more computing resources are needed.
+4. 聚合数据写入另一个Kafka。
 
-4. Aggregated data is written to another Kafka. 
+5. PubSub消费者从Kafka中拉取聚合的表情符号数据。
 
-5. The PubSub consumers pull aggregated emoji data from Kafka. 
+6. 表情符号通过PubSub基础设施实时传递给其他客户端。Hotstar考虑了以下协议：Socketio、NATS、MQTT和gRPC，最终选择了MQTT。
 
-6. Emojis are delivered to other clients in real-time through the PubSub infrastructure. The PubSub infrastructure is interesting. Hotstar considered the following protocols: Socketio, NATS, MQTT, and gRPC, and settled with MQTT.
- 
-A similar design is adopted by LinkedIn which streams a million likes/sec.
+LinkedIn采用了类似的设计来流式传输每秒百万个点赞。
 
-### How Discord Stores Trillions Of Messages 
+### Discord如何存储万亿条消息
 
-The diagram below shows the evolution of message storage at Discord: 
+下图展示了Discord消息存储的演变：
 
 <p>
   <img src="images/discord-store-messages.jpg" />
 </p>
 
-
 MongoDB ➡️ Cassandra ➡️ ScyllaDB 
 
-In 2015, the first version of Discord was built on top of a single MongoDB replica. Around Nov 2015, MongoDB stored 100 million messages and the RAM couldn’t hold the data and index any longer. The latency became unpredictable. Message storage needs to be moved to another database. Cassandra was chosen. 
+在2015年，Discord的第一版构建在单个MongoDB副本之上。到了2015年11月，MongoDB存储了1亿条消息，RAM无法再容纳数据和索引，延迟变得不可预测。消息存储需要转移到另一个数据库，选择了Cassandra。
 
-In 2017, Discord had 12 Cassandra nodes and stored billions of messages. 
+在2017年，Discord拥有12个Cassandra节点，存储了数十亿条消息。
 
-At the beginning of 2022, it had 177 nodes with trillions of messages. At this point, latency was unpredictable, and maintenance operations became too expensive to run. 
+到了2022年初，它拥有177个节点，存储了万亿条消息。此时，延迟不可预测，维护操作变得非常昂贵。
 
-There are several reasons for the issue: 
+问题有几个：
 
-- Cassandra uses the LSM tree for the internal data structure. The reads are more expensive than the writes. There can be many concurrent reads on a server with hundreds of users, resulting in hotspots. 
-- Maintaining clusters, such as compacting SSTables, impacts performance. 
-- Garbage collection pauses would cause significant latency spikes 
+- Cassandra使用LSM树作为内部数据结构。读取比写入更昂贵。服务器上可能有数百个用户同时读取，导致热点。
+- 维护集群，如压缩SSTables，会影响性能。
+- None垃None圾回收暂停会导致显著的延迟峰值。
 
-ScyllaDB is Cassandra compatible database written in C++. Discord redesigned its architecture to have a monolithic API, a data service written in Rust, and ScyllaDB-based storage. 
+ScyllaDB是一个与Cassandra兼容的数据库，由C++编写。Discord重新设计了其架构，采用了单体API、用Rust编写的服务，以及基于ScyllaDB的存储。
 
-The p99 read latency in ScyllaDB is 15ms compared to 40-125ms in Cassandra. The p99 write latency is 5ms compared to 5-70ms in Cassandra. 
+在ScyllaDB中，p99读延迟为15ms，而在Cassandra中为40-125ms。p99写延迟为5ms，而在Cassandra中为5-70ms。
 
-### How do video live streamings work on YouTube, TikTok live, or Twitch?
- 
-Live streaming differs from regular streaming because the video content is sent via the internet in real-time, usually with a latency of just a few seconds.
- 
-The diagram below explains what happens behind the scenes to make this possible.
+### 视频直播在YouTube、TikTok直播或Twitch上是如何工作的？
+
+直播与常规流媒体不同，因为视频内容通过互联网实时传输，通常延迟只有几秒。
+
+下图解释了这一切是如何实现的。
 
 <p>
   <img src="images/live_streaming_updated.jpg" style="width: 640px" />
 </p>
 
- 
-Step 1: The raw video data is captured by a microphone and camera. The data is sent to the server side.
- 
-Step 2: The video data is compressed and encoded. For example, the compressing algorithm separates the background and other video elements. After compression, the video is encoded to standards such as H.264. The size of the video data is much smaller after this step.
- 
-Step 3: The encoded data is divided into smaller segments, usually seconds in length, so it takes much less time to download or stream.
- 
-Step 4: The segmented data is sent to the streaming server. The streaming server needs to support different devices and network conditions. This is called ‘Adaptive Bitrate Streaming.’ This means we need to produce multiple files at different bitrates in steps 2 and 3.
- 
-Step 5: The live streaming data is pushed to edge servers supported by CDN (Content Delivery Network.) Millions of viewers can watch the video from an edge server nearby. CDN significantly lowers data transmission latency. 
- 
-Step 6: The viewers’ devices decode and decompress the video data and play the video in a video player.
- 
-Steps 7 and 8: If the video needs to be stored for replay, the encoded data is sent to a storage server, and viewers can request a replay from it later.
- 
-Standard protocols for live streaming include:
+步骤1：原始视频数据由麦克风和摄像头捕获。数据发送到服务器端。
 
-- RTMP (Real-Time Messaging Protocol): This was originally developed by Macromedia to transmit data between a Flash player and a server. Now it is used for streaming video data over the internet. Note that video conferencing applications like Skype use RTC (Real-Time Communication) protocol for lower latency.
-- HLS (HTTP Live Streaming): It requires the H.264 or H.265 encoding. Apple devices accept only HLS format.
-- DASH (Dynamic Adaptive Streaming over HTTP): DASH does not support Apple devices.
-- Both HLS and DASH support adaptive bitrate streaming.
+步骤2：视频数据被压缩和编码。例如，压缩算法将背景和其他视频元素分开。压缩后，视频被编码成如H.264这样的标准。经过这一步，视频数据的大小大大减小。
 
-## License
+步骤3：编码后的数据被分割成较小的段，通常是几秒长，这样下载或流媒体所需的时间就大大减少了。
 
-<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
+步骤4：分割的数据发送到流媒体服务器。流媒体服务器需要支持不同的设备和网络条件。这称为‘自适应比特率流媒体’。这意味着在步骤2和3中需要生成不同比特率的多个文件。
+
+步骤5：直播数据被推送到由CDN（内容分发网络）支持的边缘服务器。数百万观众可以从附近的边缘服务器观看视频。CDN显著降低了数据传输延迟。
+
+步骤6：观众的设备解码和解压视频数据，并在视频播放器中播放。
+
+步骤7和8：如果视频需要存储以供重播，编码数据将发送到存储服务器，观众可以稍后请求重播。
+
+直播的标准协议包括：
+
+- RTMP（实时消息协议）：最初由Macromedia开发，用于在Flash播放器和服务器之间传输数据。现在用于通过互联网流媒体视频数据。注意，像Skype这样的视频会议应用程序使用RTC（实时通信）协议以获得更低的延迟。
+- HLS（HTTP直播流）：需要H.264或H.265编码。Apple设备只接受HLS格式。
+- DASH（动态自适应流媒体）：不支持Apple设备。
+- HLS和DASH都支持自适应比特率流媒体。
+
+## 许可证
+
+<p xmlns:cc="http://creativecommons.org/ns#">本作品根据<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a>进行许可。</p>None
